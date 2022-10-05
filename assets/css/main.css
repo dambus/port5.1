@@ -35,26 +35,67 @@ p::selection {
   background: #3282b8;
 }
 
-nav {
-  padding: 2rem 2rem 0rem 2rem;
-  max-width: 90%;
-  height: 9rem;
+.header_title {
+  font-size: 4rem;
+}
+.header_title span {
+  font-family: "Edu NSW ACT Foundation", cursive;
+  color: #3282b8;
+}
+
+h1.section_heading {
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin: auto;
+  margin-bottom: 8rem;
+  z-index: 999;
+  opacity: 1;
+}
+h1.section_heading::after {
+  position: absolute;
+  content: "";
+  border-top: 1px solid rgba(15, 76, 117, 0.3);
+  height: 3rem;
+  width: 10rem;
+  top: 1.05rem;
+  left: 50%;
+}
+h1.section_heading::before {
+  position: absolute;
+  content: "";
+  border-top: 1px solid rgba(15, 76, 117, 0.3);
+  height: 3rem;
+  width: 10rem;
+  top: 2.28rem;
+  left: calc(50% - 10rem);
+}
+
+.nav {
+  padding: 0 6rem;
+  width: 100%;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  background-color: rgba(27, 38, 44, 0.95);
 }
-nav ul.nav_links {
+.nav ul.nav_links {
   display: flex;
   align-items: center;
   list-style: none;
+  z-index: 101;
 }
-nav ul.nav_links .nav_item {
+.nav ul.nav_links .nav_item {
+  position: relative;
   margin-left: 4rem;
   transition: all 0.5s;
+  transition: all 0.3s;
 }
-nav ul.nav_links .nav_item a.nav_link:link,
-nav ul.nav_links .nav_item a.nav_link:visited {
+.nav ul.nav_links .nav_item a.nav_link:link,
+.nav ul.nav_links .nav_item a.nav_link:visited {
   position: relative;
   font-size: 1.2rem;
   font-weight: 400;
@@ -64,24 +105,24 @@ nav ul.nav_links .nav_item a.nav_link:visited {
   transition: all 0.3s;
   padding: 5px 15px;
 }
-nav ul.nav_links .nav_item a.nav_link:link:before,
-nav ul.nav_links .nav_item a.nav_link:visited:before {
+.nav ul.nav_links .nav_item a.nav_link:link:before,
+.nav ul.nav_links .nav_item a.nav_link:visited:before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 0 1px;
   left: 0;
   width: 100%;
-  height: 100%;
-  border-top: 1px solid #3282b8;
-  border-bottom: 1px solid #3282b8;
+  height: 90%;
+  border-top: 1px solid linear-gradient(90deg, rgb(50, 130, 184) 0%, rgb(27, 38, 44) 50%);
+  border-bottom: 1px solid linear-gradient(90deg, rgb(50, 130, 184) 0%, rgb(27, 38, 44) 50%);
   border-left: 1px solid #3282b8;
   border-right: 1px solid #3282b8;
-  transform: scaleY(2);
+  transform: scaleY(1);
   opacity: 0;
   transition: 0.5s;
 }
-nav ul.nav_links .nav_item a.nav_link:link:after,
-nav ul.nav_links .nav_item a.nav_link:visited:after {
+.nav ul.nav_links .nav_item a.nav_link:link:after,
+.nav ul.nav_links .nav_item a.nav_link:visited:after {
   content: "";
   position: absolute;
   top: 1px;
@@ -95,31 +136,119 @@ nav ul.nav_links .nav_item a.nav_link:visited:after {
   transition: 0.5s;
   z-index: -1;
 }
-nav ul.nav_links .nav_item a.nav_link:link:hover,
-nav ul.nav_links .nav_item a.nav_link:visited:hover {
+.nav ul.nav_links .nav_item a.nav_link:link:hover,
+.nav ul.nav_links .nav_item a.nav_link:visited:hover {
   color: #fff;
 }
-nav ul.nav_links .nav_item a.nav_link:link:hover:before,
-nav ul.nav_links .nav_item a.nav_link:visited:hover:before {
-  transform: scaleY(1.4);
-  rotate: 15deg;
-  opacity: 0.5;
-  border-top-left-radius: 14px;
-  border-bottom-right-radius: 14px;
+.nav ul.nav_links .nav_item a.nav_link:link:hover:before,
+.nav ul.nav_links .nav_item a.nav_link:visited:hover:before {
+  transform: scale(1.3);
+  rotate: 5deg;
+  opacity: 0.25;
 }
-nav ul.nav_links .nav_item a.nav_link:link:hover:after,
-nav ul.nav_links .nav_item a.nav_link:visited:hover:after {
-  transform: scaleY(1);
+.nav ul.nav_links .nav_item a.nav_link:link:hover:after,
+.nav ul.nav_links .nav_item a.nav_link:visited:hover:after {
+  transform: scale(1) rotate(5deg);
   opacity: 0.9;
-  border-top-right-radius: 14px;
-  border-bottom-left-radius: 14px;
-  overflow: hidden;
 }
-nav .nav.sticky {
+.nav .blur {
+  filter: blur(0.5);
+}
+.nav .sticky {
   position: fixed;
+  background-color: rgba(27, 38, 44, 0.95);
 }
-nav .nav-logo {
+.nav .nav-logo {
   height: 70px;
+  transition: all 0.3s;
+}
+
+.project_boxes-box {
+  position: relative;
+  padding: 2rem;
+}
+.project_boxes-box h3 {
+  color: #3282b8;
+}
+.project_boxes-box img {
+  width: 100%;
+}
+.project_boxes-box .box-description {
+  margin-top: 1rem;
+}
+.project_boxes-box .box-description p {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #3282b8;
+}
+.project_boxes-box .box-description .box-used-tech {
+  color: #bbe1fa;
+  display: flex;
+  justify-content: center;
+}
+.project_boxes-box .box-description .box-used-tech .tech i {
+  color: inherit;
+  font-size: 2rem;
+  padding: 0.6rem;
+}
+
+.skill-badges {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.skill-badges .skill-badge {
+  color: #3282b8;
+  font-size: 8rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .skill-badges {
+    text-align: center;
+  }
+  .skill-badges .skill-badge {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+.footer {
+  padding: 10rem 3rem;
+  background: rgb(27, 38, 44);
+  background: linear-gradient(180deg, rgb(27, 38, 44) 50%, rgb(15, 76, 117) 99%);
+}
+
+.footer__nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.footer__item {
+  margin-right: 4rem;
+}
+
+.footer__link {
+  font-size: 1rem;
+  color: #eee;
+  text-decoration: none;
+}
+
+.footer__logo {
+  height: 5rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.footer__copyright {
+  font-size: 1rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.footer__copyright .footer__link {
+  font-size: 1.4rem;
 }
 
 * {
@@ -129,7 +258,7 @@ nav .nav-logo {
 }
 
 html {
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 128px;
   box-sizing: border-box;
 }
 
@@ -137,6 +266,39 @@ body {
   background-color: #1b262c;
   font-size: 1.05rem;
   line-height: 1.66rem;
+}
+
+.header_content {
+  height: calc(100vh - 128px);
+  display: flex;
+  align-items: center;
+}
+
+section {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 16rem;
+  z-index: 0;
+  transition: ease-in transform 0.5s, opacity 0.6s;
+}
+
+.container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 0 auto;
+  }
+  .section {
+    padding: 1rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -38,3 +38,44 @@ p {
     background: v.$color-high;
   }
 }
+
+.header_title {
+  font-size: 4rem;
+  span {
+    font-family: $font-edu;
+    color: v.$color-high;
+  }
+}
+
+h1.section_heading {
+  position: relative;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.4rem;
+  margin: auto;
+  // padding-top: 8rem;
+  margin-bottom: 8rem;
+  z-index: 999;
+  opacity: 1;
+
+  &::after {
+    // display: inline-block;
+    position: absolute;
+    content: "";
+    border-top: 1px solid rgba(v.$color-low, 0.3);
+    height: 3rem;
+    width: 10rem;
+    top: 1.05rem;
+    left: 50%;
+  }
+  &::before {
+    // display: inline-block;
+    position: absolute;
+    content: "";
+    border-top: 1px solid rgba(v.$color-low, 0.3);
+    height: 3rem;
+    width: 10rem;
+    top: 2.28rem;
+    left: calc(50% - 10rem);
+  }
+}

@@ -1,0 +1,40 @@
+@use "vars" as v;
+@use "typo" as ty;
+
+.project_boxes {
+  // position: relative;
+  // width: 100%;
+  // display: flex;
+  // justify-content: space-around;
+}
+
+.project_boxes-box {
+  position: relative;
+  // width: 45%;
+  padding: 2rem;
+  h3 {
+    color: v.$color-high;
+  }
+  img {
+    width: 100%;
+  }
+  .box-description {
+    margin-top: 1rem;
+    p {
+      padding-bottom: 1rem;
+      border-bottom: 1px solid v.$color-high;
+    }
+    .box-used-tech {
+      color: v.$color-text;
+      display: flex;
+      justify-content: center;
+      .tech {
+        i {
+          color: inherit;
+          font-size: 2rem;
+          padding: 0.6rem;
+        }
+      }
+    }
+  }
+}

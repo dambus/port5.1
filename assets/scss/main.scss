@@ -1,6 +1,9 @@
 @use "vars" as v;
 @use "typo" as ty;
 @use "nav";
+@use "work";
+@use "skill";
+@use "footer";
 
 * {
   margin: 0;
@@ -9,7 +12,7 @@
 }
 
 html {
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 128px;
   box-sizing: border-box;
 }
 
@@ -17,4 +20,44 @@ body {
   background-color: v.$color-bg;
   font-size: 1.05rem;
   line-height: 1.66rem;
+}
+
+.vspacer {
+  // padding: 6rem 0rem;
+}
+
+.header_content {
+  height: calc(100vh - 128px);
+  display: flex;
+  align-items: center;
+}
+
+section {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 16rem;
+  z-index: 0;
+  transition: ease-in transform 0.5s, opacity 0.6s;
+}
+
+.container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(3rem);
+}
+
+@media (max-width: 768px) {
+  .container {
+    // padding-left: 1rem;
+    // padding-right: 1rem;
+    margin: 0 auto;
+  }
+
+  .section {
+    padding: 1rem;
+  }
 }

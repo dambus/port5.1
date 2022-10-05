@@ -1,0 +1,26 @@
+@use "vars" as v;
+
+.skill-badges {
+  text-align: center;
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
+  margin-bottom: 6rem;
+
+  .skill-badge {
+    color: v.$color-high;
+    font-size: 8rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-badges {
+    text-align: center;
+    .skill-badge {
+      font-size: 4rem;
+      text-align: center;
+    }
+  }
+}
