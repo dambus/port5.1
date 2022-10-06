@@ -216,4 +216,44 @@ h1.section_heading::before {
   left: calc(50% - 10rem);
 }
 
-/*# sourceMappingURL=typo.css.map */
+.footer {
+  padding: 10rem 3rem;
+  background: rgb(27, 38, 44);
+  background: linear-gradient(180deg, rgb(27, 38, 44) 50%, rgb(15, 76, 117) 99%);
+}
+
+.footer__nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+
+.footer__item {
+  margin-right: 4rem;
+}
+
+.footer__link {
+  font-size: 1rem;
+  color: #eee;
+  text-decoration: none;
+}
+
+.footer__logo {
+  height: 5rem;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+.footer__copyright {
+  font-size: 1rem;
+  color: #aaa;
+  text-align: center;
+}
+
+.footer__copyright .footer__link {
+  font-size: 1.4rem;
+}
+
+/*# sourceMappingURL=footer.css.map */

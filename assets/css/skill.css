@@ -1,0 +1,22 @@
+.skill-badges {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.skill-badges .skill-badge {
+  color: #3282b8;
+  font-size: 8rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .skill-badges {
+    text-align: center;
+  }
+  .skill-badges .skill-badge {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=skill.css.map */

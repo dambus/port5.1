@@ -216,4 +216,32 @@ h1.section_heading::before {
   left: calc(50% - 10rem);
 }
 
-/*# sourceMappingURL=typo.css.map */
+.project_boxes-box {
+  position: relative;
+  padding: 2rem;
+}
+.project_boxes-box h3 {
+  color: #3282b8;
+}
+.project_boxes-box img {
+  width: 100%;
+}
+.project_boxes-box .box-description {
+  margin-top: 1rem;
+}
+.project_boxes-box .box-description p {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #3282b8;
+}
+.project_boxes-box .box-description .box-used-tech {
+  color: #bbe1fa;
+  display: flex;
+  justify-content: center;
+}
+.project_boxes-box .box-description .box-used-tech .tech i {
+  color: inherit;
+  font-size: 2rem;
+  padding: 0.6rem;
+}
+
+/*# sourceMappingURL=work.css.map */

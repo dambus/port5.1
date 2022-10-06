@@ -4,7 +4,9 @@ const navitem = document.querySelectorAll(".nav_item");
 const navLink = document.querySelectorAll(".nav_link");
 const header = document.querySelector("header");
 const section1 = document.querySelector("#work");
-
+const designBtn = document.querySelector(".design");
+const designContent = document.querySelector(".design_content");
+const overlay = document.querySelector(".overlay");
 //////////////////////////////////////////////////////
 ////////////     MENU FADE ANIMATION     /////////////
 //////////////////////////////////////////////////////
@@ -94,4 +96,24 @@ allSection.forEach(function (section) {
 allSection.forEach(function (section) {
   sectionObserver.observe(section);
   // section.classList.add("section--hidden");
+});
+
+const showOverlay = function (color) {
+  overlay.style.opacity = "0.9";
+  overlay.style.backgroundColor = color;
+};
+
+designBtn.addEventListener("mouseover", function () {
+  designContent.style.opacity = "1";
+  designContent.style.scale = "1.1";
+  designContent.style.transform = "rotate(5deg)";
+  // overlay.style.opacity = "0.8";
+  showOverlay("green");
+});
+
+designBtn.addEventListener("mouseout", function () {
+  designContent.style.opacity = "0";
+  designContent.style.scale = "1";
+  designContent.style.transform = "rotate(-5deg)";
+  overlay.style.opacity = "0";
 });
