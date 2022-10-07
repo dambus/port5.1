@@ -49,13 +49,9 @@ p {
   // span.code,
   span.design {
     position: relative;
-    // font-size: 1.2rem;
-    // font-weight: 400;
     color: v.$color-text;
     text-decoration: none;
-    // display: block;
     transition: all 0.3s;
-    // padding: 5px 15px;
 
     &:before {
       content: "";
@@ -64,10 +60,8 @@ p {
       left: 0;
       width: 100%;
       height: 90%;
-      border-top: 1px solid v.$color-gradient;
-      border-bottom: 1px solid v.$color-gradient;
-      border-left: 1px solid v.$color-high;
-      border-right: 1px solid v.$color-high;
+      border-left: 2px solid white;
+      border-right: 2px solid white;
       transform: scaleY(1);
       opacity: 0;
       transition: 0.5s;
@@ -80,7 +74,6 @@ p {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: v.$color-high;
       transform: scale(0);
       transform-origin: center;
       opacity: 0;
@@ -90,13 +83,11 @@ p {
     &:hover {
       color: #fff;
       display: inline-block;
-      // transform: rotate(25deg);
+
       &:before {
-        transform: scale(1.3);
+        transform: scale(1.2);
         rotate: (5deg);
-        opacity: 0.25;
-        // border-top-left-radius: 14px;
-        // border-bottom-right-radius: 14px;
+        opacity: 0.33;
       }
       &:after {
         transform: scale(1) rotate(5deg);
@@ -110,13 +101,10 @@ p {
 
   span.code {
     position: relative;
-    // font-size: 1.2rem;
-    // font-weight: 400;
     color: v.$color-text;
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s;
-    // padding: 5px 15px;
 
     &:before {
       content: "";
@@ -125,10 +113,8 @@ p {
       left: 0;
       width: 100%;
       height: 90%;
-      border-top: 1px solid v.$color-gradient;
-      border-bottom: 1px solid v.$color-gradient;
-      border-left: 1px solid v.$color-high;
-      border-right: 1px solid v.$color-high;
+      border-left: 2px solid white;
+      border-right: 2px solid white;
       transform: scaleY(1);
       opacity: 0;
       transition: 0.5s;
@@ -141,7 +127,6 @@ p {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: v.$color-low;
       transform: scale(0);
       transform-origin: center;
       opacity: 0;
@@ -151,9 +136,9 @@ p {
     &:hover {
       color: #fff;
       &:before {
-        transform: scale(1.3);
+        transform: scale(1.2);
         rotate: (5deg);
-        opacity: 0.25;
+        opacity: 0.33;
         // border-top-left-radius: 14px;
         // border-bottom-right-radius: 14px;
       }
@@ -184,10 +169,8 @@ p {
       left: 0;
       width: 100%;
       height: 90%;
-      border-top: 1px solid v.$color-gradient;
-      border-bottom: 1px solid v.$color-gradient;
-      border-left: 1px solid v.$color-high;
-      border-right: 1px solid v.$color-high;
+      border-left: 2px solid white;
+      border-right: 2px solid white;
       transform: scaleY(1);
       opacity: 0;
       transition: 0.5s;
@@ -200,7 +183,6 @@ p {
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: v.$color-low;
       transform: scale(0);
       transform-origin: center;
       opacity: 0;
@@ -209,10 +191,11 @@ p {
     }
     &:hover {
       color: #fff;
+
       &:before {
-        transform: scale(1.3);
+        transform: scale(1.2);
         rotate: (5deg);
-        opacity: 0.25;
+        opacity: 0.33;
         // border-top-left-radius: 14px;
         // border-bottom-right-radius: 14px;
       }

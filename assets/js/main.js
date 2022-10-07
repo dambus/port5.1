@@ -3,10 +3,12 @@ const nav = document.querySelector(".nav");
 const navitem = document.querySelectorAll(".nav_item");
 const navLink = document.querySelectorAll(".nav_link");
 const header = document.querySelector("header");
+const headerTitle = document.querySelector(".header_title");
 const section1 = document.querySelector("#work");
 const designBtn = document.querySelector(".design");
 const designContent = document.querySelector(".design_content");
 const overlay = document.querySelector(".overlay");
+const allDataButtons = document.querySelectorAll("[data-color]");
 //////////////////////////////////////////////////////
 ////////////     MENU FADE ANIMATION     /////////////
 //////////////////////////////////////////////////////
@@ -50,7 +52,7 @@ document.querySelector(".nav_links").addEventListener("click", function (e) {
 //   }
 // });
 const navHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
+
 const stickyNav = function (entries) {
   const [entry] = entries;
   // console.log(entry);
@@ -99,21 +101,49 @@ allSection.forEach(function (section) {
 });
 
 const showOverlay = function (color) {
-  overlay.style.opacity = "0.9";
+  overlay.style.opacity = 0.9;
   overlay.style.backgroundColor = color;
 };
 
-designBtn.addEventListener("mouseover", function () {
-  designContent.style.opacity = "1";
-  designContent.style.scale = "1.1";
-  designContent.style.transform = "rotate(5deg)";
-  // overlay.style.opacity = "0.8";
-  showOverlay("green");
-});
+const hideOverlay = function () {
+  overlay.style.opacity = 0;
+};
 
-designBtn.addEventListener("mouseout", function () {
-  designContent.style.opacity = "0";
-  designContent.style.scale = "1";
-  designContent.style.transform = "rotate(-5deg)";
-  overlay.style.opacity = "0";
+const callDataByLink = function () {
+  allDataButtons.forEach((el, pos) => {
+    el.addEventListener("mouseover", function () {
+      let overlayColor = el.getAttribute("data-color");
+      let calledElement = document.querySelector(
+        "." + `${el.getAttribute("data-calldiv")}`
+      );
+      calledElement.style.cssText = `opacity:1;transform:rotate(5deg) scale(1.2);top:${
+        pos * 6
+      }rem;`;
+      showOverlay(overlayColor);
+    });
+  });
+};
+
+const hideDataOut = function () {
+  allDataButtons.forEach((el) => {
+    el.addEventListener("mouseout", function () {
+      hideOverlay();
+      let calledElement = document.querySelector(
+        "." + `${el.getAttribute("data-calldiv")}`
+      );
+      calledElement.style.cssText =
+        "opacity:0;transform:scale(1) rotate(-5deg);";
+    });
+  });
+};
+
+callDataByLink();
+hideDataOut();
+
+headerTitle.addEventListener("mouseover", function () {
+  headerTitle.classList.remove("vibrate-1");
+  allDataButtons.forEach((el) => {
+    el.classList.add("underline");
+    el.style.cssText = "text-decoration: underline;";
+  });
 });
