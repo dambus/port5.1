@@ -1,4 +1,5 @@
 // selecting components
+const allSection = document.querySelectorAll("section");
 const nav = document.querySelector(".nav");
 const navitem = document.querySelectorAll(".nav_item");
 const navLink = document.querySelectorAll(".nav_link");
@@ -9,6 +10,7 @@ const designBtn = document.querySelector(".design");
 const designContent = document.querySelector(".design_content");
 const overlay = document.querySelector(".overlay");
 const allDataButtons = document.querySelectorAll("[data-color]");
+const projectTitles = document.querySelectorAll("project_boxes-project-name");
 //////////////////////////////////////////////////////
 ////////////     MENU FADE ANIMATION     /////////////
 //////////////////////////////////////////////////////
@@ -68,7 +70,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(header);
 
 // REVEAL SECTIONS
-const allSection = document.querySelectorAll("section");
+
 const revealSection = function (entries, observer) {
   const [entry] = entries;
 
@@ -85,7 +87,7 @@ const hideSections = function (entries, observer) {
 
 const sectionObserver2 = new IntersectionObserver(hideSections, {
   root: null,
-  threshold: 0.45,
+  threshold: 0.26,
 });
 
 const sectionObserver = new IntersectionObserver(revealSection, {
