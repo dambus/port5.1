@@ -242,3 +242,60 @@ h1.section_heading {
     left: calc(50% - 10rem);
   }
 }
+
+.cursive {
+  font-family: $font-edu;
+  color: v.$color-high;
+  font-size: 2rem;
+}
+
+.inlineLink {
+  position: relative;
+  text-decoration: underline;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0 1px;
+    left: 0;
+    width: 100%;
+    height: 90%;
+
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    transform: scaleY(1);
+    opacity: 0;
+    transition: 0.3s;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -15%;
+    left: -10%;
+    width: 120%;
+    height: 130%;
+    background-color: v.$color-low;
+    transform: scale(0);
+    transform-origin: center;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: -1;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      transform: scale(1.3);
+      rotate: (5deg);
+      opacity: 0.15;
+      // border-top-left-radius: 14px;
+      // border-bottom-right-radius: 14px;
+    }
+    &:after {
+      transform: scale(1) rotate(5deg);
+      opacity: 0.9;
+      // border-top-left-radius: 14px;
+      // border-bottom-right-radius: 14px;
+      // overflow: hidden;
+    }
+  }
+}

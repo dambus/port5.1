@@ -12,6 +12,7 @@
   position: relative;
   // width: 45%;
   padding: 2rem;
+  margin-bottom: 4rem;
   h3 {
     color: v.$color-high;
   }
@@ -33,6 +34,12 @@
           color: inherit;
           font-size: 2rem;
           padding: 0.6rem;
+          img {
+            // height: 2rem;
+            width: 2rem;
+            margin-top: 0.6rem;
+            // padding: 0.6rem;
+          }
         }
       }
     }

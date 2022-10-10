@@ -10,7 +10,7 @@ const designBtn = document.querySelector(".design");
 const designContent = document.querySelector(".design_content");
 const overlay = document.querySelector(".overlay");
 const allDataButtons = document.querySelectorAll("[data-color]");
-const projectTitles = document.querySelectorAll("project_boxes-project-name");
+const projectTitles = document.querySelectorAll(".project_boxes-project-name");
 //////////////////////////////////////////////////////
 ////////////     MENU FADE ANIMATION     /////////////
 //////////////////////////////////////////////////////
@@ -149,3 +149,40 @@ headerTitle.addEventListener("mouseover", function () {
     el.style.cssText = "text-decoration: underline;";
   });
 });
+
+//TYPEWRITER EFFECT
+
+const typeWriterEffect = function (entries, observer) {
+  const [entry] = entries;
+  // console.log(entries);
+  if (!entry.isIntersecting) {
+    entry.target.classList.remove("typewriter");
+  } else {
+    entry.target.classList.add("typewriter");
+  }
+  // observer.unobserve(entry.target);
+};
+
+const titleObserver = new IntersectionObserver(typeWriterEffect, {
+  root: null,
+  treshold: 0.5,
+  rootMargin: `-${navHeight}px`,
+});
+
+projectTitles.forEach(function (title) {
+  console.log(title);
+  titleObserver.observe(title);
+});
+
+// const hideSections = function (entries, observer) {
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) entry.target.classList.add("section--hidden");
+//   // observer.unobserve(entry.target);
+// };
+// const sectionObserver = new IntersectionObserver(revealSection, {
+//   root: null,
+//   threshold: 0.25,
+// });
+// allSection.forEach(function (section) {
+//   sectionObserver2.observe(section);
+// });
