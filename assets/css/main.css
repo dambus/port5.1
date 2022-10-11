@@ -358,9 +358,6 @@ h1.section_heading::before {
 .project_boxes-box h3 {
   color: #3282b8;
 }
-.project_boxes-box img {
-  width: 100%;
-}
 .project_boxes-box .box-description {
   margin-top: 1rem;
 }
@@ -381,6 +378,30 @@ h1.section_heading::before {
 .project_boxes-box .box-description .box-used-tech .tech i img {
   width: 2rem;
   margin-top: 0.6rem;
+}
+.project_boxes-box .project-wrapper {
+  position: relative;
+}
+.project_boxes-box .project-wrapper img {
+  width: 100%;
+}
+.project_boxes-box .project-wrapper .project-links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  background-color: rgba(15, 76, 117, 0.9);
+  color: #bbe1fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project_boxes-box .project-wrapper .project-links .close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
 }
 
 .skill-badges {
@@ -691,6 +712,11 @@ section {
 
 .design_content-text {
   font-size: 1rem;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /*# sourceMappingURL=main.css.map */

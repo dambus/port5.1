@@ -11,6 +11,8 @@ const designContent = document.querySelector(".design_content");
 const overlay = document.querySelector(".overlay");
 const allDataButtons = document.querySelectorAll("[data-color]");
 const projectTitles = document.querySelectorAll(".project_boxes-project-name");
+const projectWrappers = document.querySelectorAll(".project-wrapper");
+const projectLinks = document.querySelectorAll(".project-links");
 //////////////////////////////////////////////////////
 ////////////     MENU FADE ANIMATION     /////////////
 //////////////////////////////////////////////////////
@@ -44,15 +46,7 @@ document.querySelector(".nav_links").addEventListener("click", function (e) {
 //////////////////////////////////////////////////////
 ////////////      STICKY NAVIGATION      /////////////
 //////////////////////////////////////////////////////
-// const initialCoords = section1.getBoundingClientRect();
 
-// window.addEventListener("scroll", function () {
-//   if (window.scrollY > initialCoords.top) {
-//     nav.classList.add("sticky");
-//   } else {
-//     nav.classList.remove("sticky");
-//   }
-// });
 const navHeight = nav.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
@@ -69,7 +63,9 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 headerObserver.observe(header);
 
-// REVEAL SECTIONS
+//////////////////////////////////////////////////////
+////////////      REVEAL SECTIONS        /////////////
+//////////////////////////////////////////////////////
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
@@ -101,6 +97,10 @@ allSection.forEach(function (section) {
   sectionObserver.observe(section);
   // section.classList.add("section--hidden");
 });
+
+//////////////////////////////////////////////////////
+////////////         HEADER STUFF        /////////////
+//////////////////////////////////////////////////////
 
 const showOverlay = function (color) {
   overlay.style.opacity = 0.9;
@@ -150,7 +150,9 @@ headerTitle.addEventListener("mouseover", function () {
   });
 });
 
-//TYPEWRITER EFFECT
+//////////////////////////////////////////////////////
+////////////      TYPEWRITER EFFECT      /////////////
+//////////////////////////////////////////////////////
 
 const typeWriterEffect = function (entries, observer) {
   const [entry] = entries;
@@ -170,19 +172,31 @@ const titleObserver = new IntersectionObserver(typeWriterEffect, {
 });
 
 projectTitles.forEach(function (title) {
-  console.log(title);
   titleObserver.observe(title);
 });
 
-// const hideSections = function (entries, observer) {
-//   const [entry] = entries;
-//   if (!entry.isIntersecting) entry.target.classList.add("section--hidden");
-//   // observer.unobserve(entry.target);
-// };
-// const sectionObserver = new IntersectionObserver(revealSection, {
-//   root: null,
-//   threshold: 0.25,
-// });
-// allSection.forEach(function (section) {
-//   sectionObserver2.observe(section);
-// });
+//////////////////////////////////////////////////////
+////////////        PROJECT LINKS        /////////////
+//////////////////////////////////////////////////////
+
+const showProjectOverlay = function () {
+  projectWrappers.forEach((el) => {
+    el.addEventListener("click", function (evt) {
+      if ((evt.target.nextElementSibling.style.opacity = "0")) {
+        evt.target.nextElementSibling.style.cssText = "opacity:1; height:100%";
+      }
+      // el.removeEventListener("click", arguments.callee);
+
+      document.body.addEventListener("click", (evt2) => {
+        if (evt !== evt2) {
+          evt.target.nextElementSibling.style.cssText = "opacity:0; height:0";
+        } else {
+          evt.target.nextElementSibling.style.cssText =
+            "opacity:1; height:100%";
+        }
+      });
+    });
+  });
+};
+
+showProjectOverlay();
