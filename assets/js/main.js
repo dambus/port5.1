@@ -72,28 +72,30 @@ const revealSection = function (entries, observer) {
 
   if (!entry.isIntersecting) return;
   entry.target.classList.remove("section--hidden");
-  // observer.unobserve(entry.target);
+  observer.unobserve(entry.target);
 };
 
-const hideSections = function (entries, observer) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) entry.target.classList.add("section--hidden");
-  // observer.unobserve(entry.target);
-};
+// const hideSections = function (entries, observer) {
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) entry.target.classList.add("section--hidden");
+//   // observer.unobserve(entry.target);
+// };
 
-const sectionObserver2 = new IntersectionObserver(hideSections, {
-  root: null,
-  threshold: 0.26,
-});
+// const sectionObserver2 = new IntersectionObserver(hideSections, {
+//   root: null,
+//   threshold: 0.26,
+// });
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
   threshold: 0.25,
+  rootMargin: `${1.5 * navHeight}px`,
 });
+// allSection.forEach(function (section) {
+//   sectionObserver2.observe(section);
+// });
 allSection.forEach(function (section) {
-  sectionObserver2.observe(section);
-});
-allSection.forEach(function (section) {
+  section.classList.add("section--hidden");
   sectionObserver.observe(section);
   // section.classList.add("section--hidden");
 });
@@ -119,7 +121,7 @@ const callDataByLink = function () {
         "." + `${el.getAttribute("data-calldiv")}`
       );
       calledElement.style.cssText = `opacity:1;transform:rotate(5deg) scale(1.2);top:${
-        pos * 6
+        pos * 4
       }rem;`;
       showOverlay(overlayColor);
     });
@@ -201,7 +203,9 @@ const showProjectOverlay = function () {
 
 showProjectOverlay();
 
-//FINISHER HEADER
+//////////////////////////////////////////////////////
+////////////       FINISHER HEADER       /////////////
+//////////////////////////////////////////////////////
 new FinisherHeader({
   count: 5,
   size: {

@@ -18,12 +18,11 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="overlay"></div>
       <nav class="nav">
         <a href="" ><img src="assets/img/mdjlogo.png" class="nav-logo inlinelink"" alt="" /></a>
         <ul class="nav_links">
-          <!-- <li class="nav_item"><a href="#home" class="nav_link">Home</a></li> -->
           <li class="nav_item"><a href="#work" class="nav_link">Work</a></li>
           <li class="nav_item">
             <a href="#skills" class="nav_link">Skills</a>
@@ -33,26 +32,30 @@
           
         </ul>
       </nav>
-      <div class="container-fluid finisher-header">
+      <div class="finisher-header">
         <div class="container">
           <div class="row header_content">
             <div class="col-md-6">
               <h1 class="header_title vibrate-1">
                 <span class="cursive">Hi, I'm Milan.</span><br />
-                I <a href="#work" ><span class="design" data-color='orangered'data-calldiv="design_content">design</span></a> and <a href="#skills" ><span class="code" data-color='forestgreen' data-calldiv="code_content">code</span></a> beautiful <span class="stuff" data-color='cornflowerblue' data-calldiv="stuff_content">stuff</span> for web
+                I <a href="#work" ><span class="design" data-color='#FF3F34'data-calldiv="design_content">design</span></a> and <a href="#skills" ><span class="code" data-color='forestgreen' data-calldiv="code_content">code</span></a> beautiful <span class="stuff" data-color='cornflowerblue' data-calldiv="stuff_content">stuff</span> for web
               </h1>
             </div>
             <div class="col-md-6 contentWrap">
               <div class="design_content">
-                <img src="assets/img/undraw_handcrafts_photo.svg" class="img design_content-img" alt="">
-                <p class="design_content-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, totam, commodi unde qui officia doloribus ullam ad facilis vitae ipsam error maxime esse veritatis, aut quasi consectetur magni deserunt voluptatum?</p>
+                <img src="assets/img/undraw_handcrafts_photo.svg" class="img design_content--img" alt="">
+                <p class="design_content--text">First of all, I'm very creative individual. But being too creative often produces complicated designs. Thats why I try to keep my creativity on a leash and daily learn and folow best practices in the field of design to create simple and user friendly interfaces.</p>
+                <p class="design_content--text">
+                  By clicking on that word you're hovering on with your mouse you can jump to section and see my work
+                </p>
               </div>
               <div class="code_content">
-                <img src="assets/img/undraw_creation_re_d1mi.svg" class="img design_content-img" alt="">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, totam, commodi unde qui officia doloribus ullam ad facilis vitae ipsam error maxime esse veritatis, aut quasi consectetur magni deserunt voluptatum?</p>
+                <img src="assets/img/undraw_creation_re_d1mi.svg" class="img code_content--img" alt="">
+                <p class="design_content--text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, totam, commodi unde qui officia doloribus ullam ad facilis vitae ipsam error maxime esse veritatis, aut quasi consectetur magni deserunt voluptatum?</p>
               </div>
               <div class="stuff_content">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, totam, commodi unde qui officia doloribus ullam ad facilis vitae ipsam error maxime esse veritatis, aut quasi consectetur magni deserunt voluptatum?</p>
+                <img src="assets/img/undraw_creation_re_d1mi.svg" class="img stuff_content--img" alt="">
+                <p class="stuff_content--text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, totam, commodi unde qui officia doloribus ullam ad facilis vitae ipsam error maxime esse veritatis, aut quasi consectetur magni deserunt voluptatum?</p>
               </div>
             </div>
           </div>
@@ -60,9 +63,9 @@
       </div>
     </header>
 
-    <section id="work" class="container mt-5">
+    <section id="work" class="container">
       <div class="row">
-        <h1 class="section_heading">work</h1>
+        <h1 class="section_heading">my work</h1>
       </div>
 
       <div class="project_boxes justify-content-start row">
@@ -219,7 +222,7 @@
     <footer class="footer">
       <ul class="footer__nav">
         <li class="footer__item">
-          <a class="footer__link" href="#">Top</a>
+          <a class="footer__link" href="#header">Top</a>
         </li>
         <li class="footer__item">
           <a class="footer__link" href="#">Work</a>
