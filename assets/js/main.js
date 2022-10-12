@@ -200,3 +200,34 @@ const showProjectOverlay = function () {
 };
 
 showProjectOverlay();
+
+//FINISHER HEADER
+new FinisherHeader({
+  count: 5,
+  size: {
+    min: 900,
+    max: 1600,
+    pulse: 0,
+  },
+  speed: {
+    x: {
+      min: 0,
+      max: 0.3,
+    },
+    y: {
+      min: 0,
+      max: 0,
+    },
+  },
+  colors: {
+    background: "#1b262c",
+    particles: ["#3282b8", "#0f4c75", "#bbe1fa"],
+  },
+  blending: "overlay",
+  opacity: {
+    center: 0.15,
+    edge: 0.05,
+  },
+  skew: 0,
+  shapes: ["s"],
+});
