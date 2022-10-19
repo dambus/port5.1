@@ -404,6 +404,24 @@ h1.section_heading::before {
   right: 1rem;
 }
 
+.card {
+  background-color: rgba(15, 76, 117, 0.8);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.card .card-img-top {
+  min-height: 20rem;
+  transition: all 0.2s;
+}
+.card:hover {
+  background-color: #0f4c75;
+}
+.card:hover .card-img-top {
+  filter: greyscale(0);
+  transform: scale(0.975) rotate(0.35deg);
+  transition: all ease-in-out 0.15s;
+}
+
 .skill-badges {
   text-align: center;
   margin-bottom: 6rem;
