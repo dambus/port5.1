@@ -178,32 +178,6 @@ projectTitles.forEach(function (title) {
 });
 
 //////////////////////////////////////////////////////
-////////////        PROJECT LINKS        /////////////
-//////////////////////////////////////////////////////
-
-const showProjectOverlay = function () {
-  projectWrappers.forEach((el) => {
-    el.addEventListener("click", function (evt) {
-      if ((evt.target.nextElementSibling.style.opacity = "0")) {
-        evt.target.nextElementSibling.style.cssText = "opacity:1; height:100%";
-      }
-      // el.removeEventListener("click", arguments.callee);
-
-      document.body.addEventListener("click", (evt2) => {
-        if (evt !== evt2) {
-          evt.target.nextElementSibling.style.cssText = "opacity:0; height:0";
-        } else {
-          evt.target.nextElementSibling.style.cssText =
-            "opacity:1; height:100%";
-        }
-      });
-    });
-  });
-};
-
-showProjectOverlay();
-
-//////////////////////////////////////////////////////
 ////////////       FINISHER HEADER       /////////////
 //////////////////////////////////////////////////////
 new FinisherHeader({
