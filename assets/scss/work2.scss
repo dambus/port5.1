@@ -1,0 +1,28 @@
+@use "vars" as v;
+@use "typo" as ty;
+
+.card {
+  // border-radius: 0;
+  // padding: 10px;
+  background-color: rgba(v.$color-low, 0.8);
+  overflow: hidden;
+  transition: all 0.3s;
+  .card-img-top {
+    min-height: 20rem;
+    // object-fit: cover;
+    // border: 1px solid v.$color-high;
+    // filter: grayscale(1);
+    transition: all 0.2s;
+  }
+  &:hover {
+    background-color: v.$color-low;
+    .card-img-top {
+      filter: greyscale(0);
+      // transform-origin: top left;
+      transform: scale(0.975) rotate(0.35deg);
+
+      // object-fit: contain;
+      transition: all ease-in-out 0.15s;
+    }
+  }
+}
