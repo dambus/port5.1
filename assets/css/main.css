@@ -410,16 +410,44 @@ h1.section_heading::before {
   transition: all 0.3s;
 }
 .card .card-img-top {
+  background-color: black;
   min-height: 20rem;
+  object-fit: cover;
+  filter: grayscale(0.7);
   transition: all 0.2s;
 }
 .card:hover {
   background-color: #0f4c75;
 }
 .card:hover .card-img-top {
-  filter: greyscale(0);
-  transform: scale(0.975) rotate(0.35deg);
+  filter: grayscale(0);
+  transform: scale(0.975);
   transition: all ease-in-out 0.15s;
+}
+.card .card-title {
+  font-family: "Catamaran", sans-serif;
+  text-transform: uppercase;
+}
+.card .card-text {
+  font-family: "Overpass", sans-serif;
+  font-size: 1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid rgba(187, 225, 250, 0.3);
+  min-height: 7rem;
+}
+.card .used {
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bbe1fa;
+}
+.card .used i {
+  font-size: 2rem;
+  padding: 0.6rem;
+}
+.card .used i img {
+  width: 2rem;
 }
 
 .skill-badges {

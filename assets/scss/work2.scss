@@ -8,21 +8,54 @@
   overflow: hidden;
   transition: all 0.3s;
   .card-img-top {
+    background-color: black;
+
     min-height: 20rem;
-    // object-fit: cover;
+    object-fit: cover;
     // border: 1px solid v.$color-high;
-    // filter: grayscale(1);
+    filter: grayscale(0.7);
     transition: all 0.2s;
   }
   &:hover {
     background-color: v.$color-low;
     .card-img-top {
-      filter: greyscale(0);
-      // transform-origin: top left;
-      transform: scale(0.975) rotate(0.35deg);
+      filter: grayscale(0);
+      transform: scale(0.975);
 
       // object-fit: contain;
       transition: all ease-in-out 0.15s;
+    }
+  }
+  .card-title {
+    font-family: ty.$font-cata;
+    text-transform: uppercase;
+  }
+  .card-text {
+    font-family: ty.$font-over;
+    font-size: 1rem;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid rgba(v.$color-text, 0.3);
+    min-height: 7rem;
+  }
+  .used {
+    // padding: 1.2rem 0;
+    transition: all 0.2s;
+    // color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // font-size: 2rem;
+    color: v.$color-text;
+    i {
+      // color: inherit;
+      font-size: 2rem;
+      padding: 0.6rem;
+      img {
+        // height: 2rem;
+        width: 2rem;
+        // margin-top: 0.6rem;
+        // padding: 0.6rem;
+      }
     }
   }
 }

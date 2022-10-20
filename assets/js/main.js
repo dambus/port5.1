@@ -13,6 +13,7 @@ const allDataButtons = document.querySelectorAll("[data-color]");
 const projectTitles = document.querySelectorAll(".project_boxes-project-name");
 const projectWrappers = document.querySelectorAll(".project-wrapper");
 const projectLinks = document.querySelectorAll(".project-links");
+const projectCards = document.querySelectorAll(".project-card");
 //////////////////////////////////////////////////////
 ////////////     MENU FADE ANIMATION     /////////////
 //////////////////////////////////////////////////////
@@ -209,3 +210,20 @@ new FinisherHeader({
   skew: 0,
   shapes: ["s"],
 });
+
+//////////////////////////////////////////////////////
+////////////      PROJECT SHOWCASE       /////////////
+//////////////////////////////////////////////////////
+const projectHoverIn = function () {
+  projectCards.forEach((el) => {
+    el.addEventListener("mouseover", function () {});
+  });
+};
+projectHoverIn();
+
+const projectHoverOut = function () {
+  projectCards.forEach((el) => {
+    el.addEventListener("mouseout", function () {});
+  });
+};
+projectHoverOut();
