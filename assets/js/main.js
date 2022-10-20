@@ -12,7 +12,7 @@ const overlay = document.querySelector(".overlay");
 const allDataButtons = document.querySelectorAll("[data-color]");
 const projectTitles = document.querySelectorAll(".project_boxes-project-name");
 const projectWrappers = document.querySelectorAll(".project-wrapper");
-const projectLinks = document.querySelectorAll(".project-links");
+const projectLinks = document.querySelectorAll(".project-links-lg");
 const projectCards = document.querySelectorAll(".project-card");
 //////////////////////////////////////////////////////
 ////////////     MENU FADE ANIMATION     /////////////
@@ -122,7 +122,7 @@ const callDataByLink = function () {
         "." + `${el.getAttribute("data-calldiv")}`
       );
       calledElement.style.cssText = `opacity:1;transform:rotate(5deg) scale(1.2);top:${
-        pos * 4
+        pos * 2
       }rem;`;
       showOverlay(overlayColor);
     });
@@ -216,14 +216,24 @@ new FinisherHeader({
 //////////////////////////////////////////////////////
 const projectHoverIn = function () {
   projectCards.forEach((el) => {
-    el.addEventListener("mouseover", function () {});
+    el.addEventListener("mouseover", function () {
+      const targetDiv = el.querySelector(".project-links-lg");
+      targetDiv.classList.add("moveUp");
+      targetDiv.parentElement.classList.remove("goMiddle");
+      targetDiv.parentElement.classList.add("goRight");
+    });
   });
 };
 projectHoverIn();
 
 const projectHoverOut = function () {
   projectCards.forEach((el) => {
-    el.addEventListener("mouseout", function () {});
+    el.addEventListener("mouseout", function () {
+      const targetDiv = el.querySelector(".project-links-lg");
+      targetDiv.classList.remove("moveUp");
+      targetDiv.parentElement.classList.add("goMiddle");
+      targetDiv.parentElement.classList.remove("goRight");
+    });
   });
 };
 projectHoverOut();
