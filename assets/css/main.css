@@ -421,7 +421,6 @@ h1.section_heading::before {
 }
 .card:hover .card-img-top {
   filter: grayscale(0);
-  transform: scale(0.975);
   transition: all ease-in-out 0.15s;
 }
 .card .card-title {
@@ -493,6 +492,19 @@ h1.section_heading::before {
 
 .goRight {
   justify-content: end;
+}
+
+.skwd {
+  max-width: 60%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  transform: perspective(800px) rotateY(-12deg);
+  transition: transform 1s ease 0s;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.024) 0px 0px 0px 1px, rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.03) 0px 0px 8px 0px, rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
+}
+.skwd:hover {
+  transform: perspective(800px) rotateY(-4deg);
 }
 
 .skill-badges {
@@ -658,6 +670,99 @@ h1.section_heading::before {
     width: 100%;
   }
 }
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 0; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+  filter: blur(60);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #1b262c;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  color: #bbe1fa;
+}
+.modal-content h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+.modal-content h5 {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  font-weight: 300;
+}
+.modal-content ul {
+  margin-top: 0;
+}
+.modal-content ul li {
+  font-weight: 300;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* The Close Button */
+.close {
+  color: #bbe1fa;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #3282b8;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  background-color: #1b262c;
+  border: none;
+  outline: none;
+  height: auto;
+}
+
+.modal-body {
+  background-color: #1b262c;
+}
+
 * {
   margin: 0;
   padding: 0;

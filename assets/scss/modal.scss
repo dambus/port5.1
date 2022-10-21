@@ -1,0 +1,106 @@
+@use "vars" as v;
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 999; /* Sit on top */
+  padding-top: 0; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.6); /* Black w/ opacity */
+  filter: blur(60);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: v.$color-bg;
+  // background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  // border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  color: v.$color-text;
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+
+  h5 {
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    font-weight: 300;
+  }
+  ul {
+    margin-top: 0;
+    li {
+      font-weight: 300;
+    }
+  }
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: v.$color-text;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: v.$color-high;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  background-color: v.$color-bg;
+  border: none;
+  outline: none;
+  height: auto;
+}
+
+.modal-body {
+  background-color: v.$color-bg;
+}
+
+.modal-footer {
+  // padding: 2px 16px;
+  // background-color: #5cb85c;
+  // // color: white;
+}
