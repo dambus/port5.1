@@ -115,3 +115,10 @@
     transform: perspective(800px) rotateY(-4deg);
   }
 }
+
+@media (max-width: 992px) {
+  .project-links-lg {
+    left: 0;
+    width: 100%;
+  }
+}

@@ -2,7 +2,7 @@
 @use "typo" as ty;
 
 .footer {
-  padding: 10rem 3rem;
+  padding: 5rem 1rem;
   background: rgb(27, 38, 44);
   background: linear-gradient(
     180deg,
@@ -15,7 +15,7 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  margin-bottom: 5rem;
+  // margin-bottom: 2rem;
 }
 
 .footer__item {
@@ -32,7 +32,7 @@
   height: 5rem;
   display: block;
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 
 .footer__copyright {
@@ -42,5 +42,28 @@
 }
 
 .footer__copyright .footer__link {
-  font-size: 1.4rem;
+  font-size: 1rem;
+}
+
+.footer__credits {
+  font-size: 0.875rem;
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding: 5rem 2rem;
+    margin-bottom: 5rem;
+    .footer__nav {
+      display: none;
+    }
+    .footer__copyright {
+      font-size: 0.875rem;
+      p {
+        font-size: 0.875rem;
+      }
+    }
+    .footer__credits {
+      font-size: 0.75rem;
+    }
+  }
 }

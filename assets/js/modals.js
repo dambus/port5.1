@@ -7,7 +7,7 @@ const bodyBlock = function () {
 const bodyUnblock = function () {
   // document.body.style.position = "auto";
   document.body.style.overflow = "auto";
-  nav.style.display = "flex";
+  if (vw >= 992) nav.style.display = "flex";
 };
 
 function loadModData(modlink) {

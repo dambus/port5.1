@@ -7,6 +7,7 @@
 @use "footer";
 @use "animation";
 @use "modal";
+@use "sidebar";
 
 * {
   margin: 0;
@@ -17,12 +18,13 @@
 html {
   scroll-padding-top: 128px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: v.$color-bg;
-  font-size: 1.05rem;
-  line-height: 1.66rem;
+  font-size: 1rem;
+  line-height: 1.6rem;
 }
 
 a {
@@ -37,7 +39,7 @@ section {
   padding-bottom: 16rem;
   z-index: 0;
   transition: ease-in transform 0.5s, opacity 0.6s;
-  border-top: 1px solid rgba(v.$color-low, 0.2);
+  // border-top: 1px solid rgba(v.$color-low, 0.2);
 }
 
 .container {
@@ -202,11 +204,14 @@ section {
 // -----------------
 @media (max-width: 768px) {
   .container {
+    padding: 0.875rem;
     margin: 0 auto;
+    width: 100vw;
   }
 
   .section {
-    padding: 1rem;
+    // padding: 1rem;
+    // margin-bottom: 6rem;
   }
 
   .contentWrap {
@@ -237,6 +242,20 @@ section {
     }
   }
 }
+
+@media (max-width: 992px) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  .nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+}
 // -----------
 // AUX CLASSES
 // -----------
@@ -260,5 +279,5 @@ section {
 
 //SECTION SPECIFIC CLASSES
 #work {
-  margin-top: 10rem;
+  margin-top: 12rem;
 }

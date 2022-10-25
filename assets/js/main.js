@@ -47,14 +47,21 @@ document.querySelector(".nav_links").addEventListener("click", function (e) {
 //////////////////////////////////////////////////////
 ////////////      STICKY NAVIGATION      /////////////
 //////////////////////////////////////////////////////
+const vw = Math.max(
+  document.documentElement.clientWidth || 0,
+  window.innerWidth || 0
+);
 
 const navHeight = nav.getBoundingClientRect().height;
 
 const stickyNav = function (entries) {
   const [entry] = entries;
   // console.log(entry);
-  if (!entry.isIntersecting) nav.style.position = "fixed";
-  else nav.style.position = "";
+  console.log(vw);
+  if (vw >= 992) {
+    if (!entry.isIntersecting) nav.style.position = "fixed";
+    else nav.style.position = "";
+  }
 };
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
@@ -90,7 +97,7 @@ const revealSection = function (entries, observer) {
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
   threshold: 0.25,
-  rootMargin: `${1.5 * navHeight}px`,
+  // rootMargin: `${1.5 * navHeight}px`,
 });
 // allSection.forEach(function (section) {
 //   sectionObserver2.observe(section);

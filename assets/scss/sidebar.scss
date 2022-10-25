@@ -1,0 +1,110 @@
+@use "vars" as v;
+@use "typo" as typ;
+
+#sidebar-left {
+  position: fixed;
+  height: 100vh;
+  bottom: 0;
+  left: 0;
+  width: 5rem;
+  z-index: 101;
+
+  .content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    // transform: rotate(90deg);
+    color: v.$color-text;
+    margin: 1rem auto;
+    // text-align: center;
+
+    &:after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: calc(50% + 7px);
+      height: 25%;
+      width: 100%;
+      border-left: 1px solid rgba(v.$color-text, 0.15);
+      z-index: 900;
+    }
+
+    &:before {
+      position: absolute;
+      content: "quick links";
+      bottom: 10%;
+      left: 6px;
+      font-family: typ.$font-fig;
+      font-weight: 300;
+      height: auto;
+      width: 100%;
+      text-align: center;
+      margin: 10px auto;
+      transform: rotate(270deg);
+      color: v.$color-high;
+      z-index: 1000;
+      // background-color: v.$color-bg;
+
+      // border: 1px solid white;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        height: 2rem;
+        width: 100%;
+        margin-bottom: 0.8rem;
+
+        a {
+          // height: 2rem;
+          font-size: 1.6rem;
+          text-align: center;
+          transition: all ease 0.2s;
+          color: v.$color-text;
+
+          &:hover {
+            color: v.$color-high;
+          }
+        }
+      }
+    }
+  }
+}
+
+a.letterbuttons {
+  font-size: 1.8rem !important;
+  font-weight: 700;
+  font-family: typ.$font-titi;
+}
+
+@media (max-width: 992px) {
+  #sidebar-left {
+    // border: 1px solid red;
+    border-top: 1px solid v.$color-low;
+    background-color: v.$color-bg;
+    padding-right: 1rem;
+    height: 4rem;
+    width: 100%;
+    .content {
+      &::after {
+        display: none;
+      }
+      &::before {
+        display: none;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        li {
+          width: auto;
+          display: inline;
+        }
+      }
+    }
+  }
+}
