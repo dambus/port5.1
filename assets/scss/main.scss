@@ -200,63 +200,6 @@ section {
   transition: background-color 1.2s, opacity 1s;
 }
 
-// -----------------
-// RESPONSIVE DESIGN
-// -----------------
-@media (max-width: 768px) {
-  .container {
-    padding: 0.875rem;
-    margin: 0 auto;
-    width: 100vw;
-  }
-
-  .section {
-    // padding: 1rem;
-    // margin-bottom: 6rem;
-  }
-
-  .contentWrap {
-    max-height: calc(100vh - 12rem);
-  }
-}
-
-@media (max-width: 1576px) {
-  .contentWrap {
-    max-height: 50%;
-  }
-
-  .design_content,
-  .code_content,
-  .stuff_content {
-    // position: relative;
-    top: 0rem;
-    margin-top: -5rem;
-    img {
-      margin: 0;
-      padding: 0;
-      height: 180px;
-    }
-    p {
-      margin-top: 0;
-      font-size: 0.8rem;
-      line-height: 1.2rem;
-    }
-  }
-}
-
-@media (max-width: 992px) {
-  section {
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-  }
-  .nav {
-    display: none;
-  }
-
-  .mobile-nav {
-    display: flex;
-  }
-}
 // -----------
 // AUX CLASSES
 // -----------
@@ -300,4 +243,57 @@ section {
 //SECTION SPECIFIC CLASSES
 #work {
   margin-top: 12rem;
+}
+
+// -----------------
+// RESPONSIVE DESIGN
+// -----------------
+@media (max-width: 768px) {
+  .container {
+    padding: 0.875rem;
+    margin: 0 auto;
+    width: 100vw;
+  }
+
+  .contentWrap {
+    max-height: calc(100vh - 12rem);
+  }
+}
+
+@media (max-width: 1576px) {
+  .contentWrap {
+    max-height: 50%;
+  }
+
+  .design_content,
+  .code_content,
+  .stuff_content {
+    // position: relative;
+    top: 0rem;
+    margin-top: -5rem;
+    img {
+      margin: 0;
+      padding: 0;
+      height: 180px;
+    }
+    p {
+      margin-top: 0;
+      font-size: 0.8rem;
+      line-height: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  section {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  .nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
 }

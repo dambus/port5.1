@@ -166,7 +166,7 @@ headerTitle.addEventListener("mouseover", function () {
 new FinisherHeader({
   count: 5,
   size: {
-    min: 900,
+    min: 376,
     max: 1600,
     pulse: 0,
   },
