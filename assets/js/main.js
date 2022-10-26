@@ -161,31 +161,6 @@ headerTitle.addEventListener("mouseover", function () {
 });
 
 //////////////////////////////////////////////////////
-////////////      TYPEWRITER EFFECT      /////////////
-//////////////////////////////////////////////////////
-
-const typeWriterEffect = function (entries, observer) {
-  const [entry] = entries;
-  // console.log(entries);
-  if (!entry.isIntersecting) {
-    entry.target.classList.remove("typewriter");
-  } else {
-    entry.target.classList.add("typewriter");
-  }
-  // observer.unobserve(entry.target);
-};
-
-const titleObserver = new IntersectionObserver(typeWriterEffect, {
-  root: null,
-  treshold: 0.5,
-  rootMargin: `-${navHeight}px`,
-});
-
-projectTitles.forEach(function (title) {
-  titleObserver.observe(title);
-});
-
-//////////////////////////////////////////////////////
 ////////////       FINISHER HEADER       /////////////
 //////////////////////////////////////////////////////
 new FinisherHeader({
@@ -244,3 +219,32 @@ const projectHoverOut = function () {
   });
 };
 projectHoverOut();
+
+//////////////////////////////////////////////////////
+////////////     VENDOR TYPE EFFECT      /////////////
+//////////////////////////////////////////////////////
+const typed = document.querySelector(".typed");
+if (typed) {
+  let typed_strings = typed.getAttribute("data-typed-items");
+  typed_strings = typed_strings.split(",");
+  new Typed(".typed", {
+    strings: typed_strings,
+    loop: true,
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 1600,
+  });
+}
+
+const typedAlso = document.querySelector(".typed-also");
+if (typed) {
+  let typed_strings = typedAlso.getAttribute("data-typed-items");
+  typed_strings = typed_strings.split(",");
+  new Typed(".typed-also", {
+    strings: typed_strings,
+    loop: true,
+    typeSpeed: 66,
+    backSpeed: 50,
+    backDelay: 2000,
+  });
+}

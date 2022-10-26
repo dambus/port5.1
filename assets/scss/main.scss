@@ -8,6 +8,7 @@
 @use "animation";
 @use "modal";
 @use "sidebar";
+@use "about";
 
 * {
   margin: 0;
@@ -275,6 +276,25 @@ section {
 
 .underline {
   text-decoration: underline;
+}
+
+.highlight-bg {
+  // display: inline;
+  color: v.$color-bg !important;
+  position: relative;
+  padding: 3rem 0rem;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: v.$color-text;
+    transform: rotate(2.5deg);
+    z-index: -99;
+    // opacity: 0.6;
+  }
 }
 
 //SECTION SPECIFIC CLASSES

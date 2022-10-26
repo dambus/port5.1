@@ -22,10 +22,15 @@
   margin-right: 4rem;
 }
 
-.footer__link {
+.footer__link,
+footer a {
   font-size: 1rem;
   color: #eee;
   text-decoration: none;
+  &:hover {
+    color: v.$color-high;
+    transition: color 0.25s ease-out;
+  }
 }
 
 .footer__logo {
