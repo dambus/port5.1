@@ -64,6 +64,7 @@
           text-align: center;
           transition: all ease 0.2s;
           color: v.$color-text;
+          text-decoration: none;
 
           &:hover {
             color: v.$color-high;
@@ -80,7 +81,7 @@ a.letterbuttons {
   font-family: typ.$font-titi;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   #sidebar-left {
     // border: 1px solid red;
     border-top: 1px solid v.$color-low;
@@ -103,6 +104,11 @@ a.letterbuttons {
         li {
           width: auto;
           display: inline;
+          a.letterbuttons {
+            display: flex;
+            align-items: start;
+            margin-top: -10px;
+          }
         }
       }
     }
