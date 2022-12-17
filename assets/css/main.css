@@ -29,6 +29,7 @@ p {
   line-height: 1.66rem;
   font-weight: 200;
   color: #bbe1fa;
+  margin-top: 1.5rem;
 }
 p::selection {
   color: #1b262c;
@@ -257,7 +258,7 @@ h1.section_heading::before {
   opacity: 0.9;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   h1.header_title {
     font-size: 2rem;
     line-height: 2.6rem;
@@ -383,6 +384,8 @@ header nav ul li:last-child {
 }
 #sidebar-left .content ul li a:hover {
   color: #3282b8;
+  transform: translateY(2px);
+  transition: transform 0.3s;
 }
 
 a.letterbuttons {
@@ -539,6 +542,90 @@ a.letterbuttons {
     transition: none;
   }
 }
+.skill-badges {
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.skill-badges .skill-badge {
+  color: #3282b8;
+  font-size: 8rem;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+}
+
+@media (max-width: 992px) {
+  .skill-badges {
+    text-align: center;
+  }
+  .skill-badges .skill-badge {
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+img.about {
+  padding: 2rem;
+}
+
+.mdj-btn {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #bbe1fa;
+  text-decoration: none;
+  display: inline;
+  transition: all 0.3s;
+  padding: 5px 15px;
+}
+.mdj-btn:after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f4c75;
+  transform: scale(0);
+  transform-origin: center;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+}
+.mdj-btn:hover {
+  color: #fff;
+}
+.mdj-btn:hover:before {
+  transform: scale(1.3);
+  rotate: 3deg;
+  opacity: 0.25;
+}
+.mdj-btn:hover:after {
+  transform: scale(1) rotate(3deg);
+  opacity: 0.9;
+}
+
+p {
+  margin-top: 1.5rem !important;
+}
+
+@media (max-width: 768px) {
+  img.about {
+    padding: 1rem;
+  }
+}
+#footer {
+  width: 96vw;
+  margin: 8rem 0rem;
+}
+
+@media (max-width: 768px) {
+  #footer .first-footer-left > img {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+  #footer .first-footer-right {
+    display: none;
+  }
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -614,6 +701,7 @@ select {
 }
 body {
   background-color: #1b262c;
+  scroll-margin-top: 3rem;
 }
 
 .container {
@@ -625,7 +713,8 @@ body {
 }
 
 section {
-  margin-top: 8rem;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
 }
 section .section-heading {
   position: relative;
@@ -697,6 +786,11 @@ section .section-heading:after {
   header,
 section {
     min-height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  body {
+    scroll-margin-bottom: 5rem;
   }
 }
 

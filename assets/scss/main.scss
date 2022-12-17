@@ -3,12 +3,16 @@
 @use "nav";
 @use "sidebar";
 @use "work";
+@use "skills";
+@use "about";
+@use "footer";
 @import "reset";
 
 $spacer: 2rem;
 
 body {
   background-color: v.$color-bg;
+  scroll-margin-top: 3rem;
 }
 
 .container {
@@ -20,7 +24,8 @@ body {
 }
 
 section {
-  margin-top: 8rem;
+  margin-top: 10rem;
+  margin-bottom: 4rem;
 
   .section-heading {
     position: relative;
@@ -99,5 +104,11 @@ section {
   header,
   section {
     min-height: 100vh;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    scroll-margin-bottom: 5rem;
   }
 }

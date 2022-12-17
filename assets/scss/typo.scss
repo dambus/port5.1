@@ -33,6 +33,7 @@ p {
   line-height: 1.66rem;
   font-weight: 200;
   color: v.$color-text;
+  margin-top: 1.5rem;
   &::selection {
     color: v.$color-bg;
     background: v.$color-high;
@@ -276,7 +277,7 @@ h1.section_heading {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   h1.header_title {
     font-size: 2rem;
     line-height: 2.6rem;

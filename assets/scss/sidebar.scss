@@ -68,6 +68,8 @@
 
           &:hover {
             color: v.$color-high;
+            transform: translateY(2px);
+            transition: transform 0.3s;
           }
         }
       }
