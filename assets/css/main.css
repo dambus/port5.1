@@ -616,16 +616,10 @@ p {
   width: 96vw;
   margin: 8rem 0rem;
 }
-
-@media (max-width: 768px) {
-  #footer .first-footer-left > img {
-    max-width: 50%;
-    margin: 0 auto;
-  }
-  #footer .first-footer-right {
-    display: none;
-  }
+#footer .footer-text-small {
+  font-size: 0.8rem;
 }
+
 /* Box sizing rules */
 *,
 *::before,

@@ -1,0 +1,20 @@
+1. header
+  - make it sticky
+  - active links
+
+2. footer
+  - zavrsiti thanks to sekciju
+
+3. about
+  - napraviti stranicu za more info
+  - blog?
+  - ubaciti story-e
+
+4. general
+  - javascript 
+    - fade in
+    - ubaciti neki modal? mozda za kontakt?
+
+5. work
+  - javascript
+    - modali za info o projektu

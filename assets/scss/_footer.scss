@@ -5,16 +5,7 @@
   width: 96vw;
   margin: 8rem 0rem;
   // border: 1px solid white;
-}
-
-@media (max-width: 768px) {
-  #footer {
-    .first-footer-left > img {
-      max-width: 50%;
-      margin: 0 auto;
-    }
-    .first-footer-right {
-      display: none;
-    }
+  .footer-text-small {
+    font-size: 0.8rem;
   }
 }
