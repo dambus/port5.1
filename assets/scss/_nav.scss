@@ -3,65 +3,61 @@
 
 header {
   height: 100vh;
-  height: 5rem;
+  border: 1px solid v.$color-bg;
+}
+
+#navigation {
+  width: 100%;
+  // height: 9rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2rem;
+  padding: 0rem 10rem;
   z-index: 99;
 
-  img {
-    width: 8rem;
+  .logo {
+    flex: 50%;
+    img {
+      height: 7rem;
+      padding: 1rem;
+    }
   }
-
-  nav {
+  ul.nav {
+    flex: 50%;
     display: flex;
-    justify-items: flex-end;
-    align-items: center;
-    ul {
-      list-style: none;
-      li {
-        display: inline-block;
-        margin-right: 1.5rem;
-        height: 100%;
-        a {
-          position: relative;
-          text-decoration: none;
-          height: 100;
-          color: v.$color-text;
-          padding: 0.5rem 1rem;
-          &:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transform: scale(1) rotate(0);
-            transition: all 0.4s;
+    justify-content: flex-end;
 
-            background-color: v.$color-high;
-            z-index: -1;
-          }
+    li.nav_item {
+      height: 100%;
+      // padding: 1rem;
 
-          &:hover {
-            color: v.$color-high;
-            transition: all 0.25s;
-            // background-color: v.$color-high;
-            color: v.$color-bg;
-            &:after {
-              transform-origin: center;
-              transform: scale(1.05) rotate(3.5deg);
-              opacity: 1;
-              transition: all 0.4s;
-            }
-          }
-        }
-      }
-      li:last-child {
-        margin-right: 0;
+      a.nav_link {
+        position: relative;
+        font-size: 1.25rem;
+        color: v.$color-text;
+        text-decoration: none;
       }
     }
+  }
+}
+
+.fixed-style {
+  position: fixed;
+  margin: 0;
+  background-color: rgba(v.$color-lowlight, 0.95);
+  .logo {
+    img {
+      height: 5rem !important;
+    }
+  }
+
+  a.nav_link {
+    font-size: 0.9rem !important;
+  }
+}
+
+.smaller-logo {
+  img {
+    // height: 5rem !important;
   }
 }

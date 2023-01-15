@@ -1,0 +1,21 @@
+@use "vars" as v;
+@use "typo" as typo;
+
+@media (max-width: 1024px) {
+  #navigation {
+    padding: 0 5rem;
+  }
+
+  .logo {
+    flex: 30%;
+  }
+  .nav {
+    flex: 70%;
+    li.nav_item {
+      justify-content: space-around;
+      a.nav_link {
+        font-size: 1rem !important;
+      }
+    }
+  }
+}

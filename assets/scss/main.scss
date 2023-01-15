@@ -6,13 +6,14 @@
 @use "skills";
 @use "about";
 @use "footer";
+@use "snippets/nav_buttons";
+@use "responsive";
 @import "reset";
 
 $spacer: 2rem;
 
 body {
   background-color: v.$color-bg;
-  scroll-margin-top: 3rem;
 }
 
 .container {
@@ -26,6 +27,7 @@ body {
 section {
   margin-top: 10rem;
   margin-bottom: 4rem;
+  scroll-margin-top: 140px;
 
   .section-heading {
     position: relative;

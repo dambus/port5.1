@@ -1,9 +1,10 @@
 // selecting components
 const allSection = document.querySelectorAll("section");
-const nav = document.querySelector(".nav");
+const nav = document.getElementById("navigation");
+const logo = document.querySelector(".logo");
 const navitem = document.querySelectorAll(".nav_item");
 const navLink = document.querySelectorAll(".nav_link");
-const header = document.querySelector("header");
+const header = document.querySelector(".header");
 const headerTitle = document.querySelector(".header_title");
 const section1 = document.querySelector("#work");
 const designBtn = document.querySelector(".design");
@@ -14,29 +15,11 @@ const projectTitles = document.querySelectorAll(".project_boxes-project-name");
 const projectWrappers = document.querySelectorAll(".project-wrapper");
 const projectLinks = document.querySelectorAll(".project-links-lg");
 const projectCards = document.querySelectorAll(".project-card");
-//////////////////////////////////////////////////////
-////////////     MENU FADE ANIMATION     /////////////
-//////////////////////////////////////////////////////
-const handleHover = function (e, opacity) {
-  if (e.target.classList.contains("nav_link")) {
-    const link = e.target;
-    const siblings = link.closest("nav").querySelectorAll(".nav_link");
-    const logo = link.closest("nav").querySelector("img");
-
-    siblings.forEach((el) => {
-      if (el !== link) el.style.opacity = this;
-    });
-    logo.style.opacity = this;
-  }
-};
-
-nav.addEventListener("mouseover", handleHover.bind(0.5));
-nav.addEventListener("mouseout", handleHover.bind(1));
 
 //////////////////////////////////////////////////////
 //////////       PAGE NAVIGATION       ///////////////
 //////////////////////////////////////////////////////
-document.querySelector(".nav_links").addEventListener("click", function (e) {
+document.querySelector(".nav_item").addEventListener("click", function (e) {
   e.preventDefault();
   if (e.target.classList.contains("nav_link")) {
     const id = e.target.getAttribute("href");
@@ -53,14 +36,20 @@ const vw = Math.max(
 );
 
 const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
 
 const stickyNav = function (entries) {
   const [entry] = entries;
   // console.log(entry);
   console.log(vw);
   if (vw >= 992) {
-    if (!entry.isIntersecting) nav.style.position = "fixed";
-    else nav.style.position = "";
+    if (!entry.isIntersecting) {
+      nav.classList.add("fixed-style");
+      logo.classList.add("smaller-logo");
+    } else {
+      nav.style.position = "";
+      nav.classList.remove("fixed-style");
+    }
   }
 };
 const headerObserver = new IntersectionObserver(stickyNav, {
@@ -112,86 +101,86 @@ allSection.forEach(function (section) {
 ////////////         HEADER STUFF        /////////////
 //////////////////////////////////////////////////////
 
-const showOverlay = function (color) {
-  overlay.style.opacity = 0.9;
-  overlay.style.backgroundColor = color;
-};
+// const showOverlay = function (color) {
+//   overlay.style.opacity = 0.9;
+//   overlay.style.backgroundColor = color;
+// };
 
-const hideOverlay = function () {
-  overlay.style.opacity = 0;
-};
+// const hideOverlay = function () {
+//   overlay.style.opacity = 0;
+// };
 
-const callDataByLink = function () {
-  allDataButtons.forEach((el, pos) => {
-    el.addEventListener("mouseover", function () {
-      let overlayColor = el.getAttribute("data-color");
-      let calledElement = document.querySelector(
-        "." + `${el.getAttribute("data-calldiv")}`
-      );
-      calledElement.style.cssText = `opacity:1;transform:rotate(5deg) scale(1.2);top:${
-        pos * 2
-      }rem;`;
-      showOverlay(overlayColor);
-    });
-  });
-};
+// const callDataByLink = function () {
+//   allDataButtons.forEach((el, pos) => {
+//     el.addEventListener("mouseover", function () {
+//       let overlayColor = el.getAttribute("data-color");
+//       let calledElement = document.querySelector(
+//         "." + `${el.getAttribute("data-calldiv")}`
+//       );
+//       calledElement.style.cssText = `opacity:1;transform:rotate(5deg) scale(1.2);top:${
+//         pos * 2
+//       }rem;`;
+//       showOverlay(overlayColor);
+//     });
+//   });
+// };
 
-const hideDataOut = function () {
-  allDataButtons.forEach((el) => {
-    el.addEventListener("mouseout", function () {
-      hideOverlay();
-      let calledElement = document.querySelector(
-        "." + `${el.getAttribute("data-calldiv")}`
-      );
-      calledElement.style.cssText =
-        "opacity:0;transform:scale(1) rotate(-5deg);";
-    });
-  });
-};
+// const hideDataOut = function () {
+//   allDataButtons.forEach((el) => {
+//     el.addEventListener("mouseout", function () {
+//       hideOverlay();
+//       let calledElement = document.querySelector(
+//         "." + `${el.getAttribute("data-calldiv")}`
+//       );
+//       calledElement.style.cssText =
+//         "opacity:0;transform:scale(1) rotate(-5deg);";
+//     });
+//   });
+// };
 
-callDataByLink();
-hideDataOut();
+// callDataByLink();
+// hideDataOut();
 
-headerTitle.addEventListener("mouseover", function () {
-  headerTitle.classList.remove("vibrate-1");
-  allDataButtons.forEach((el) => {
-    el.classList.add("underline");
-    el.style.cssText = "text-decoration: underline;";
-  });
-});
+// headerTitle.addEventListener("mouseover", function () {
+//   headerTitle.classList.remove("vibrate-1");
+//   allDataButtons.forEach((el) => {
+//     el.classList.add("underline");
+//     el.style.cssText = "text-decoration: underline;";
+//   });
+// });
 
 //////////////////////////////////////////////////////
 ////////////       FINISHER HEADER       /////////////
 //////////////////////////////////////////////////////
-new FinisherHeader({
-  count: 5,
-  size: {
-    min: 376,
-    max: 1600,
-    pulse: 0,
-  },
-  speed: {
-    x: {
-      min: 0,
-      max: 0.3,
-    },
-    y: {
-      min: 0,
-      max: 0,
-    },
-  },
-  colors: {
-    background: "#1b262c",
-    particles: ["#3282b8", "#0f4c75", "#bbe1fa"],
-  },
-  blending: "overlay",
-  opacity: {
-    center: 0.15,
-    edge: 0.05,
-  },
-  skew: 0,
-  shapes: ["s"],
-});
+// new FinisherHeader({
+//   count: 5,
+//   size: {
+//     min: 376,
+//     max: 1600,
+//     pulse: 0,
+//   },
+//   speed: {
+//     x: {
+//       min: 0,
+//       max: 0.3,
+//     },
+//     y: {
+//       min: 0,
+//       max: 0,
+//     },
+//   },
+//   colors: {
+//     background: "#1b262c",
+//     particles: ["#3282b8", "#0f4c75", "#bbe1fa"],
+//   },
+//   blending: "overlay",
+//   opacity: {
+//     center: 0.15,
+//     edge: 0.05,
+//   },
+//   skew: 0,
+//   shapes: ["s"],
+// });
 
 //////////////////////////////////////////////////////
 ////////////      PROJECT SHOWCASE       /////////////

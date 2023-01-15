@@ -18,3 +18,6 @@
 5. work
   - javascript
     - modali za info o projektu
+  - staviti prave linkove ka live projektima
+  - precesljati used tech za svaki projekat
+  - ubaciti miretov website
