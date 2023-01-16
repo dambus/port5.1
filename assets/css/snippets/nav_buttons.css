@@ -1,0 +1,37 @@
+a.nav_link {
+  position: relative;
+  text-decoration: none;
+  height: 100;
+  color: #bbe1fa;
+  padding: 0.5rem 1rem;
+}
+a.nav_link:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transform: scale(1) rotate(0);
+  transition: all 0.4s;
+  background-color: #3282b8;
+  z-index: -1;
+}
+a.nav_link:hover {
+  color: #3282b8;
+  transition: all 0.25s;
+  color: #1b262c;
+}
+a.nav_link:hover:after {
+  transform-origin: center;
+  transform: scale(1.05) rotate(3.5deg);
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+li:last-child {
+  margin-right: 0;
+}
+
+/*# sourceMappingURL=nav_buttons.css.map */

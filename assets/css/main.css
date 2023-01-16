@@ -189,24 +189,6 @@ h1.section_heading {
   z-index: 999;
   opacity: 1;
 }
-h1.section_heading::after {
-  position: absolute;
-  content: "";
-  border-top: 1px solid rgba(15, 76, 117, 0.3);
-  height: 3rem;
-  width: 10rem;
-  top: 1.05rem;
-  left: 50%;
-}
-h1.section_heading::before {
-  position: absolute;
-  content: "";
-  border-top: 1px solid rgba(15, 76, 117, 0.3);
-  height: 3rem;
-  width: 10rem;
-  top: 2.28rem;
-  left: calc(50% - 10rem);
-}
 
 .cursive {
   font-family: "Edu NSW ACT Foundation", cursive;
@@ -277,6 +259,7 @@ header {
   align-items: center;
   padding: 0rem 10rem;
   z-index: 99;
+  margin: 0;
 }
 #navigation .logo {
   flex: 50%;
@@ -303,13 +286,21 @@ header {
 .fixed-style {
   position: fixed;
   margin: 0;
-  background-color: rgba(17, 34, 64, 0.95);
+  padding: 0;
+  background-color: rgba(27, 38, 44, 0.95);
+  border-bottom: 1px solid #0f4c75;
 }
 .fixed-style .logo img {
   height: 5rem !important;
 }
 .fixed-style a.nav_link {
-  font-size: 0.9rem !important;
+  font-size: 0.95rem !important;
+}
+
+.active {
+  background-color: #0f4c75;
+  padding: 0;
+  z-index: -2;
 }
 
 #sidebar-left {
@@ -647,9 +638,11 @@ li:last-child {
   #navigation {
     padding: 0 5rem;
   }
+
   .logo {
     flex: 30%;
   }
+
   .nav {
     flex: 70%;
   }
@@ -724,6 +717,7 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
+
   *,
 *::before,
 *::after {
@@ -788,6 +782,7 @@ section .section-heading:after {
   .container {
     width: 96vw;
   }
+
   nav {
     position: fixed;
     padding: 0.8125rem 0;
@@ -805,18 +800,22 @@ section .section-heading:after {
     display: flex;
     justify-content: space-evenly;
   }
+
   .highlight,
 .headline {
     text-align: center;
   }
+
   .logo {
     margin: 0 auto;
   }
+
   h1.section-heading {
     max-width: 66%;
     font-size: 1.6rem;
     padding: 0.5rem 0.75rem;
   }
+
   header,
 section {
     min-height: 100vh;

@@ -6,7 +6,7 @@ const navitem = document.querySelectorAll(".nav_item");
 const navLink = document.querySelectorAll(".nav_link");
 const header = document.querySelector(".header");
 const headerTitle = document.querySelector(".header_title");
-const section1 = document.querySelector("#work");
+// const section1 = document.querySelector("#work");
 const designBtn = document.querySelector(".design");
 const designContent = document.querySelector(".design_content");
 const overlay = document.querySelector(".overlay");
@@ -60,6 +60,29 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 headerObserver.observe(header);
 
+//////////////////////////////////////////////////////
+////////////         ACTIVE LINKS        /////////////
+//////////////////////////////////////////////////////
+const sections = document.querySelectorAll("section");
+console.log(navLink.innerHTML);
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY > sectionTop - 200) {
+      current = section.getAttribute("id");
+    }
+  });
+  // console.log(current);
+  navLink.forEach((link) => {
+    link.classList.remove("active");
+
+    if (link.classList.contains(current)) {
+      link.classList.add("active");
+    }
+  });
+});
 //////////////////////////////////////////////////////
 ////////////      REVEAL SECTIONS        /////////////
 //////////////////////////////////////////////////////

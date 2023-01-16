@@ -204,24 +204,24 @@ h1.section_heading {
   z-index: 999;
   opacity: 1;
 
-  &::after {
-    position: absolute;
-    content: "";
-    border-top: 1px solid rgba(v.$color-low, 0.3);
-    height: 3rem;
-    width: 10rem;
-    top: 1.05rem;
-    left: 50%;
-  }
-  &::before {
-    position: absolute;
-    content: "";
-    border-top: 1px solid rgba(v.$color-low, 0.3);
-    height: 3rem;
-    width: 10rem;
-    top: 2.28rem;
-    left: calc(50% - 10rem);
-  }
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   border-top: 1px solid rgba(v.$color-low, 0.3);
+  //   height: 3rem;
+  //   width: 10rem;
+  //   top: 1.05rem;
+  //   left: 50%;
+  // }
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   border-top: 1px solid rgba(v.$color-low, 0.3);
+  //   height: 3rem;
+  //   width: 10rem;
+  //   top: 2.28rem;
+  //   left: calc(50% - 10rem);
+  // }
 }
 
 .cursive {

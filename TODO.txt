@@ -1,6 +1,6 @@
 1. header
-  - make it sticky
-  - active links
+  * make it sticky OK
+  * active links OK
 
 2. footer
   - zavrsiti thanks to sekciju
