@@ -90,9 +90,12 @@ window.addEventListener("scroll", () => {
 const revealSection = function (entries, observer) {
   const [entry] = entries;
 
-  if (!entry.isIntersecting) return;
-  entry.target.classList.remove("section--hidden");
-  observer.unobserve(entry.target);
+  if (!entry.isIntersecting) {
+    entry.target.classList.remove("inview");
+  } else {
+    entry.target.classList.add("inview");
+    // observer.unobserve(entry.target);
+  }
 };
 
 // const hideSections = function (entries, observer) {
@@ -108,14 +111,13 @@ const revealSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.25,
-  // rootMargin: `${1.5 * navHeight}px`,
+  threshold: 0.4,
+  // rootMargin: `${1.6 * navHeight}px`,
+  rootMargin: "300px",
 });
-// allSection.forEach(function (section) {
-//   sectionObserver2.observe(section);
-// });
+
 allSection.forEach(function (section) {
-  section.classList.add("section--hidden");
+  section.classList.add("appear");
   sectionObserver.observe(section);
   // section.classList.add("section--hidden");
 });

@@ -19,3 +19,31 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  section {
+    scroll-margin-top: 3rem;
+  }
+  .nav {
+    background-color: v.$color-low;
+    position: fixed;
+    bottom: 4.5rem;
+    left: 0;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    // flex: 100%;
+    // display: flex;
+    justify-content: space-around;
+    li.nav_item {
+      a.nav_link {
+        &::before {
+          display: none;
+        }
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

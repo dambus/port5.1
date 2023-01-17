@@ -27,31 +27,35 @@ body {
 section {
   margin-top: 10rem;
   margin-bottom: 4rem;
-  scroll-margin-top: 140px;
+  scroll-margin-top: 250px;
 
   .section-heading {
     position: relative;
     text-align: center;
-    color: v.$color-bg;
+    color: v.$color-high;
     display: inline;
     max-width: 25%;
     margin: 0 auto;
     margin-bottom: 5rem;
     transform: rotate(3deg);
-    &:after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      padding: 2rem 2rem;
-      background-color: v.$color-high;
-      z-index: -1;
-      transform-origin: center;
-      transform: translateY(-0.5rem);
-    }
+    // &:after {
+    //   position: absolute;
+    //   content: "";
+    //   top: 0;
+    //   left: 0;
+    //   height: 100%;
+    //   width: 100%;
+    //   padding: 2rem 2rem;
+    //   background-color: v.$color-high;
+    //   z-index: -1;
+    //   transform-origin: center;
+    //   transform: translateY(-0.5rem);
+    // }
   }
+}
+
+section#skills {
+  scroll-margin-top: 190px;
 }
 
 // UTILITY CLASSES
@@ -113,4 +117,16 @@ section {
   body {
     scroll-margin-bottom: 5rem;
   }
+}
+
+.appear {
+  transition: all 0.8s;
+  opacity: 0;
+  transform: translateY(5rem);
+}
+
+.appear.inview {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.3s;
 }
