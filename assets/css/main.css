@@ -638,11 +638,9 @@ li:last-child {
   #navigation {
     padding: 0 5rem;
   }
-
   .logo {
     flex: 30%;
   }
-
   .nav {
     flex: 70%;
   }
@@ -657,21 +655,29 @@ li:last-child {
   section {
     scroll-margin-top: 3rem;
   }
-
-  .nav {
-    background-color: #0f4c75;
-    position: fixed;
-    bottom: 4.5rem;
-    left: 0;
-    padding: 0;
+  #navigation {
+    background-color: #ee964b;
+    height: 3rem;
+    width: 100vw;
     margin: 0 auto;
-    width: 100%;
-    justify-content: space-around;
+    padding: 0;
+    position: fixed;
+    bottom: 4rem;
   }
-  .nav li.nav_item a.nav_link::before {
+  #navigation .logo {
+    flex: 1%;
+  }
+  #navigation .logo img {
     display: none;
   }
-  .nav li.nav_item a.nav_link::after {
+  #navigation ul.nav {
+    flex: 99%;
+    justify-content: space-evenly;
+  }
+  #navigation ul.nav a.nav_link::before {
+    display: none;
+  }
+  #navigation ul.nav a.nav_link::after {
     display: none;
   }
 }
@@ -739,7 +745,6 @@ select {
   html:focus-within {
     scroll-behavior: auto;
   }
-
   *,
 *::before,
 *::after {
@@ -795,7 +800,6 @@ section#skills {
   .container {
     width: 96vw;
   }
-
   nav {
     position: fixed;
     padding: 0.8125rem 0;
@@ -813,22 +817,18 @@ section#skills {
     display: flex;
     justify-content: space-evenly;
   }
-
   .highlight,
 .headline {
     text-align: center;
   }
-
   .logo {
     margin: 0 auto;
   }
-
   h1.section-heading {
     max-width: 66%;
     font-size: 1.6rem;
     padding: 0.5rem 0.75rem;
   }
-
   header,
 section {
     min-height: 100vh;

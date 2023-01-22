@@ -12,7 +12,7 @@
 
 4. general
   - javascript 
-    - fade in
+    * fade in
     - ubaciti neki modal? mozda za kontakt?
 
 5. work
