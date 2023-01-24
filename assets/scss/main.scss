@@ -32,7 +32,13 @@ p {
 }
 
 .container {
-  // width: 76vw;
+  max-width: 76vw;
+}
+
+.header {
+}
+.header--content {
+  margin-top: 8rem;
 }
 
 .highlight {

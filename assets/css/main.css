@@ -939,6 +939,14 @@ p a:hover:after {
   background-color: rgba(50, 130, 184, 0.5);
 }
 
+.container {
+  max-width: 76vw;
+}
+
+.header--content {
+  margin-top: 8rem;
+}
+
 .highlight {
   color: #3282b8;
 }
