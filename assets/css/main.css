@@ -774,7 +774,48 @@ li:last-child {
     font-size: 1rem !important;
   }
 }
+@media (max-width: 992px) {
+  h1.section-heading {
+    max-width: 50%;
+  }
+}
 @media (max-width: 767px) {
+  .container {
+    width: 96vw;
+  }
+  nav {
+    position: fixed;
+    padding: 0.8125rem 0;
+    background-color: rgba(15, 76, 117, 0.75);
+    z-index: 1001;
+    bottom: 4rem;
+    left: 0;
+    font-size: 0.75rem;
+    margin: 0 auto;
+  }
+  nav ul {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .highlight,
+.headline {
+    text-align: center;
+  }
+  .logo {
+    margin: 0 auto;
+  }
+  h1.section-heading {
+    max-width: 66%;
+    font-size: 1.6rem;
+    padding: 0.5rem 0.75rem;
+  }
+  header,
+section {
+    min-height: 100vh;
+  }
   section {
     scroll-margin-top: 3rem;
   }
@@ -802,6 +843,11 @@ li:last-child {
   }
   #navigation ul.nav a.nav_link::after {
     display: none;
+  }
+}
+@media (max-width: 480px) {
+  section {
+    scroll-margin-top: 0;
   }
 }
 /* Box sizing rules */
@@ -881,8 +927,16 @@ body {
   background-color: #1b262c;
 }
 
-.container {
-  width: 76vw;
+p a {
+  color: #3282b8;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+p a:hover {
+  color: white !important;
+}
+p a:hover:after {
+  background-color: rgba(50, 130, 184, 0.5);
 }
 
 .highlight {
@@ -899,14 +953,13 @@ section .section-heading {
   text-align: center;
   color: #3282b8;
   display: inline;
-  max-width: 25%;
   margin: 0 auto;
   margin-bottom: 5rem;
   transform: rotate(3deg);
 }
 
 section#skills {
-  scroll-margin-top: 190px;
+  scroll-margin-top: 250px;
 }
 
 .space-around {
@@ -914,54 +967,6 @@ section#skills {
   justify-content: space-around;
 }
 
-@media (max-width: 992px) {
-  h1.section-heading {
-    max-width: 50%;
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    width: 96vw;
-  }
-  nav {
-    position: fixed;
-    padding: 0.8125rem 0;
-    background-color: rgba(15, 76, 117, 0.75);
-    z-index: 1001;
-    bottom: 4rem;
-    left: 0;
-    font-size: 0.75rem;
-    margin: 0 auto;
-  }
-  nav ul {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .highlight,
-.headline {
-    text-align: center;
-  }
-  .logo {
-    margin: 0 auto;
-  }
-  h1.section-heading {
-    max-width: 66%;
-    font-size: 1.6rem;
-    padding: 0.5rem 0.75rem;
-  }
-  header,
-section {
-    min-height: 100vh;
-  }
-}
-@media (max-width: 768px) {
-  body {
-    scroll-margin-bottom: 5rem;
-  }
-}
 .appear {
   transition: all 0.8s;
   opacity: 0;

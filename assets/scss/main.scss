@@ -17,8 +17,22 @@ body {
   background-color: v.$color-bg;
 }
 
+p {
+  a {
+    color: v.$color-high;
+    font-weight: 700;
+    letter-spacing: 1px;
+    &:hover {
+      color: white !important;
+      &:after {
+        background-color: rgba(v.$color-high, 0.5);
+      }
+    }
+  }
+}
+
 .container {
-  width: 76vw;
+  // width: 76vw;
 }
 
 .highlight {
@@ -35,89 +49,21 @@ section {
     text-align: center;
     color: v.$color-high;
     display: inline;
-    max-width: 25%;
+    // max-width: 25%;
     margin: 0 auto;
     margin-bottom: 5rem;
     transform: rotate(3deg);
-    // &:after {
-    //   position: absolute;
-    //   content: "";
-    //   top: 0;
-    //   left: 0;
-    //   height: 100%;
-    //   width: 100%;
-    //   padding: 2rem 2rem;
-    //   background-color: v.$color-high;
-    //   z-index: -1;
-    //   transform-origin: center;
-    //   transform: translateY(-0.5rem);
-    // }
   }
 }
 
 section#skills {
-  scroll-margin-top: 190px;
+  scroll-margin-top: 250px;
 }
 
 // UTILITY CLASSES
 .space-around {
   display: flex;
   justify-content: space-around;
-}
-
-// RESPONSIVE DESIGN
-
-@media (max-width: 992px) {
-  h1.section-heading {
-    max-width: 50%;
-  }
-}
-@media (max-width: 768px) {
-  .container {
-    width: 96vw;
-  }
-  nav {
-    position: fixed;
-    padding: 0.8125rem 0;
-    background-color: rgba(v.$color-low, 0.75);
-    z-index: 1001;
-
-    bottom: 4rem;
-    left: 0;
-    font-size: 0.75rem;
-    margin: 0 auto;
-    ul {
-      padding: 0;
-      margin: 0;
-      width: 100vw;
-      display: flex;
-      justify-content: space-evenly;
-    }
-  }
-  .highlight,
-  .headline {
-    text-align: center;
-  }
-
-  .logo {
-    margin: 0 auto;
-  }
-  h1.section-heading {
-    max-width: 66%;
-    font-size: 1.6rem;
-    padding: 0.5rem 0.75rem;
-  }
-
-  header,
-  section {
-    min-height: 100vh;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    scroll-margin-bottom: 5rem;
-  }
 }
 
 .appear {
