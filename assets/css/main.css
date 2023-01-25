@@ -525,10 +525,12 @@ a.letterbuttons {
   margin-bottom: 6rem;
 }
 .skill-badges .skill-badge {
+  position: relative;
   color: #3282b8;
   font-size: 8rem;
   margin-bottom: 2rem;
   margin-left: 2rem;
+  z-index: 98;
 }
 
 @media (max-width: 992px) {
@@ -773,15 +775,28 @@ li:last-child {
   .nav li.nav_item a.nav_link {
     font-size: 1rem !important;
   }
-}
-@media (max-width: 992px) {
+  .still-learning {
+    font-size: 0.76rem !important;
+    width: 100% !important;
+    padding: 10px 20px !important;
+  }
   h1.section-heading {
     max-width: 50%;
   }
 }
 @media (max-width: 767px) {
   .container {
-    width: 96vw;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+  section {
+    padding: 0;
+    width: 100vw;
+    margin-top: 0rem !important;
+    margin-bottom: 4rem;
+    scroll-margin-top: 2rem !important;
   }
   nav {
     position: fixed;
@@ -816,9 +831,6 @@ li:last-child {
 section {
     min-height: 100vh;
   }
-  section {
-    scroll-margin-top: 3rem;
-  }
   #navigation {
     background-color: #ee964b;
     height: 3rem;
@@ -838,11 +850,18 @@ section {
     flex: 99%;
     justify-content: space-evenly;
   }
+  #navigation ul.nav a.nav_link {
+    color: #1b262c !important;
+  }
   #navigation ul.nav a.nav_link::before {
     display: none;
   }
   #navigation ul.nav a.nav_link::after {
     display: none;
+  }
+  #navigation ul.nav a.nav_link.active {
+    border: 1px solid #1b262c;
+    color: white !important;
   }
 }
 @media (max-width: 480px) {
@@ -985,6 +1004,24 @@ section#skills {
   opacity: 1;
   transform: none;
   transition-delay: 0.3s;
+}
+
+.still-learning {
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  width: 50%;
+  height: 20%;
+  background-color: #ee964b;
+  color: #1b262c;
+  transform: rotate(6deg);
+  z-index: 99;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+  font-family: "Catamaran", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

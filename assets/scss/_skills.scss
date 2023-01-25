@@ -5,10 +5,12 @@
   margin-bottom: 6rem;
 
   .skill-badge {
+    position: relative;
     color: v.$color-high;
     font-size: 8rem;
     margin-bottom: 2rem;
     margin-left: 2rem;
+    z-index: 98;
   }
 }
 

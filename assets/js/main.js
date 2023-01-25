@@ -116,9 +116,12 @@ const sectionObserver = new IntersectionObserver(revealSection, {
   rootMargin: "300px",
 });
 
+var viewport_width = window.innerWidth;
 allSection.forEach(function (section) {
-  section.classList.add("appear");
-  sectionObserver.observe(section);
+  if (viewport_width > 1024) {
+    section.classList.add("appear");
+    sectionObserver.observe(section);
+  }
   // section.classList.add("section--hidden");
 });
 

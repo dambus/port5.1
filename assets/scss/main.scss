@@ -35,8 +35,6 @@ p {
   max-width: 76vw;
 }
 
-.header {
-}
 .header--content {
   margin-top: 8rem;
 }
@@ -82,4 +80,23 @@ section#skills {
   opacity: 1;
   transform: none;
   transition-delay: 0.3s;
+}
+
+//WIDGET CLASSES
+.still-learning {
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  width: 50%;
+  height: 20%;
+  background-color: v.$color-acc-high;
+  color: v.$color-bg;
+  transform: rotate(6deg);
+  z-index: 99;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+  font-family: ty.$font-cata;
 }
