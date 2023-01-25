@@ -61,7 +61,7 @@ section {
 }
 
 section#skills {
-  scroll-margin-top: 250px;
+  scroll-margin-top: 225px;
 }
 
 // UTILITY CLASSES
@@ -99,4 +99,5 @@ section#skills {
   align-items: center;
   text-transform: lowercase;
   font-family: ty.$font-cata;
+  padding: 10px 20px;
 }
