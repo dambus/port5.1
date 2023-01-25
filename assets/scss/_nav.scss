@@ -17,14 +17,15 @@ header {
   margin: 0;
 
   .logo {
-    flex: 50%;
+    flex: 30%;
     img {
       height: 7rem;
       padding: 1rem;
     }
   }
+
   ul.nav {
-    flex: 50%;
+    flex: 70%;
     display: flex;
     justify-content: flex-end;
 

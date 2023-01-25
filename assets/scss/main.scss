@@ -87,7 +87,7 @@ section#skills {
   position: absolute;
   top: 0;
   right: -1rem;
-  width: 50%;
+  width: 5rem;
   height: 20%;
   background-color: v.$color-acc-high;
   color: v.$color-bg;
@@ -99,5 +99,5 @@ section#skills {
   align-items: center;
   text-transform: lowercase;
   font-family: ty.$font-cata;
-  padding: 10px 20px;
+  padding: 10px 30px !important;
 }
