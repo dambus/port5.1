@@ -112,6 +112,16 @@ h1.section_heading {
   }
 }
 
+.magazine {
+  column-count: 2;
+  column-width: 200px;
+  column-gap: 60px;
+  p {
+    text-indent: 30px;
+    text-align: justify;
+  }
+}
+
 @media (max-width: 768px) {
   h1.header_title {
     font-size: 2rem;

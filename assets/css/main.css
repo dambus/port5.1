@@ -105,6 +105,16 @@ h1.section_heading {
   opacity: 0.9;
 }
 
+.magazine {
+  column-count: 2;
+  column-width: 200px;
+  column-gap: 60px;
+}
+.magazine p {
+  text-indent: 30px;
+  text-align: justify;
+}
+
 @media (max-width: 768px) {
   h1.header_title {
     font-size: 2rem;
@@ -460,6 +470,29 @@ p {
     padding: 1rem;
   }
 }
+#details .details-card {
+  display: flex;
+  flex-wrap: wrap;
+}
+#details .details-card img {
+  width: 7rem;
+  height: 7rem;
+  padding: 1rem;
+}
+#details .details-card h4 {
+  display: flex;
+  align-items: center;
+}
+#details .details-card p.details-card--para {
+  color: red;
+  flex: 100%;
+}
+
+#post-introduction {
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+}
+
 #footer {
   width: 96vw;
   margin: 8rem 0rem;

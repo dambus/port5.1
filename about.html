@@ -11,7 +11,6 @@
       crossorigin="anonymous"
     />
     <script
-    defer
       async
       src="https://kit.fontawesome.com/c9219fe591.js"
       crossorigin="anonymous"
@@ -19,25 +18,20 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
-
     <!-- MODAL Start -->
 
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header justify-content-end">
-      <span class="close">&times;</span>
-      
-    </div>
-    <div class="modal-body">
-      <div id="ext-content">        
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header justify-content-end">
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div id="ext-content"></div>
+        </div>
       </div>
     </div>
-  </div>
-
-</div>
-<!-- END modal -->
+    <!-- END modal -->
 
     <!-- SIDEBAR start-->
     <div id="sidebar-left">
@@ -80,84 +74,64 @@
       </div>
     </div>
     <!-- END Sidebar -->
-
-    <header class="header">
-      <!-- NAVIGATION -->
-      <div id="navigation" class="">
-        <div class="logo">
-          <a href="index.html" class="logo-link"><img src="assets/img/mdjlogo.png" alt=""></a>
-        </div>
-        <ul class="nav">
-          <li class="nav_item"><a href="#work" class="nav_link work">work</a></li>
-          <li class="nav_item"><a href="#skills" class="nav_link skills">skills</a></li>
-          <li class="nav_item"><a href="#about" class="nav_link about">about</a></li>
-          <li class="nav_item"><a href="#contact" class="nav_link">contact</a></li>
-        </ul>
+    !-- NAVIGATION -->
+    <div id="navigation" class="">
+      <div class="logo">
+        <a href="index.html" class="logo-link"
+          ><img src="assets/img/mdjlogo.png" alt=""
+        /></a>
       </div>
-      <!-- END Navigation -->
-      
-      
-      
-         <div class="container">
-          <div class="row header--content">
+      <ul class="nav">
+        <li class="nav_item">
+          <a href="index.html#work" class="nav_link work">work</a>
+        </li>
+        <li class="nav_item">
+          <a href="index.html#skills" class="nav_link skills">skills</a>
+        </li>
+        <li class="nav_item">
+          <a href="index.html#about" class="nav_link about">about</a>
+        </li>
+        <li class="nav_item">
+          <a href="index.html#contact" class="nav_link">contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- NAVIGATION end -->
+    <div class="container" id="top">
+      <div class="row header--content py-5">
             
-            <div class="col-lg-6 order-sm-1 order-md-2 header--content-second">
-              <img src="assets/img/illustrations/Software integration-bro.svg" alt="" />
-            </div>
-            <div class="col-lg-6 my-auto order-sm-2 order-md-1  pt-4 header--content-first">
-              <h3 class="highlight">A little bit more about me</h3>
-              <h1 class="headline">
-                Nice to meet you, I'm a tech enthusiast, developer, gamer and a geek.
-              </h1>
-             
-             <!-- <div class="cta">
-               <a href="#work" class="cta-button">
-                 <span class="text-flicker-in-glow cta-text">check out my work</span>
-               </a>
-             </div> -->
-            </div>
-          </div>
+        <div class="col-lg-6 order-sm-1 order-md-2 header--content-second">
+          <img src="assets/img/illustrations/Software integration-bro.svg" alt="" />
+        </div>
+        <div class="col-lg-6 my-auto order-sm-2 order-md-1  pt-4 header--content-first">
+          <h3 class="highlight">Hey, nice to meet you...</h3>
+          <h1 class="headline">
+            As you know, my name is Milan <br>
+            and I'm a tech enthusiast, developer, gamer and a geek.
+          </h1>
+         
+         <div class="cta">
+           <a href="#post-introduction" class="cta-button">
+             <span class="text-flicker-in-glow cta-text">continue</span>
+           </a>
+         </div>
         </div>
       </div>
-    </header>
-
-    <main>
-      <section id="introduction">
-        <div class="container">
-          <div class="row g-5">
-            <div class="col-lg-5 col-md-12">
-              <img src="https://via.placeholder.com/600x400.png" alt="">
-            </div>
-            <div class="col-lg-7 col-md-12">
-              <p>I'm always ready to dig into new technologies and challenges, exploring new opportunities. I like to learn new, interesting stuff, by need or by curiosity. Always experimenting, always trying out something new, and I'm never bored. Currently, I'm into learning JavaScript and React.</p>
-            </div>
-          </div>
+      </div>
+    </div>
+    <section id="post-introduction" class="container">
+      <div class="row my-5">
+        <div class="col-lg-4 col-sm-12 mx-auto">
+          <img src="assets/img/illustrations/Hand coding-bro.png" alt="">
         </div>
-      </section>
-      
-      <footer id="footer">
-        <div class="container">
-          <div class="col-md-12">
-            <p class="text-center footer-text">Designed by Milan Đumić</p>
-          </div>
-          <div class="col-md-12">
-            <p class="text-center footer-text-small">
-              Thanks to: <a href="">Brittany Chiang</a> for inspiration and
-              ideas,
-              <a href="https://twitter.com/jonasschmedtman"
-                >Jonas Schmedtmann</a
-              >
-              for teaching me Javascript,
-              <a href="https://twitter.com/academind_real"
-                >Maximilian Schwarzmüller</a
-              >for teaching me React
-            </p>
-          </div>
-        </div>
-      </footer>
-    </main>
+        <div class="col-lg-8 col-sm-12 mx-auto magazine">
+          <p>I'm always ready to dig into new technologies and challenges, exploring new opportunities. I like to learn new, interesting stuff, by need or by curiosity. Always experimenting, always trying out something new, and I'm never bored. Currently, I'm into learning JavaScript, React, and Selenium.</p>
 
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/modals.js"></script>
+<p>Couldn't imagine doing anything without creativity. It's a curse for doing the job with strict boundaries, but it's a blessing for everything else. Where creativity and logic cross their path, that's the place I'm standing in. Back in the days when I wrote my first "Hello world" and changed the color of the text... Oh boy, that was a joyful moment.</p>
+
+<p>I'm also a gamer. Currently hooked up to WoT and some RPGs like Grim Dawn and Diablo. I like single-player, but cope very well in multiplayer too. This last sentence is also true when I'm working.</p>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

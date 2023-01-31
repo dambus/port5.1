@@ -56,3 +56,29 @@ p {
     padding: 1rem;
   }
 }
+
+//ABOUT PAGE
+#details {
+  .details-card {
+    display: flex;
+    flex-wrap: wrap;
+    img {
+      width: 7rem;
+      height: 7rem;
+      padding: 1rem;
+    }
+    h4 {
+      display: flex;
+      align-items: center;
+    }
+    p.details-card--para {
+      color: red;
+      flex: 100%;
+    }
+  }
+}
+
+#post-introduction {
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+}
