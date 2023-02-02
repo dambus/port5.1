@@ -777,9 +777,14 @@ section {
     scroll-margin-top: -200px;
     padding: 0;
     margin: 0;
+    margin-top: 1rem !important;
   }
   .cta {
-    margin-top: 1rem;
+    margin-top: 0;
+  }
+  .img-600 {
+    max-height: 400px !important;
+    margin: 0 auto;
   }
 }
 /* The typewriter cursor effect */
@@ -1284,6 +1289,10 @@ section#skills {
   opacity: 1;
   transform: none;
   transition-delay: 0.3s;
+}
+
+.img-600 {
+  max-height: 600px;
 }
 
 .still-learning {
