@@ -24,8 +24,13 @@
     padding: 10px 20px !important;
   }
 
-  h1.section-heading {
+  .section-heading {
     max-width: 50%;
+    // margin-bottom: 20vh;
+    padding-bottom: 5vh;
+  }
+  section {
+    margin-top: 10vh;
   }
 }
 
@@ -44,8 +49,9 @@
   section {
     padding: 0;
     width: 100vw;
-    margin-top: 0rem !important;
-    margin-bottom: 4rem;
+    // margin-top: 0rem !important;
+    // margin-bottom: 4rem;
+    // margin-bottom: 5vh;
     scroll-margin-top: 2rem !important;
   }
 
@@ -122,17 +128,11 @@
   .cta {
     margin-top: 3rem;
   }
-  // .header--content-frist {
-  //   order: 2;
-  // }
-  // .header--content-second {
-  //   order: 1;
-  // }
 }
 
 @media (max-width: 576px) {
   section {
-    scroll-margin-top: -200px;
+    // scroll-margin-top: -200px;
     padding: 0;
     margin: 0;
     margin-top: 1rem !important;

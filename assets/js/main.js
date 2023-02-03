@@ -113,12 +113,12 @@ const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
   threshold: 0.4,
   // rootMargin: `${1.6 * navHeight}px`,
-  rootMargin: "300px",
+  rootMargin: "10vh",
 });
 
 var viewport_width = window.innerWidth;
 allSection.forEach(function (section) {
-  if (viewport_width > 1024) {
+  if (viewport_width > 768) {
     section.classList.add("appear");
     sectionObserver.observe(section);
   }

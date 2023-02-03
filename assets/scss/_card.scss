@@ -128,3 +128,27 @@
     }
   }
 }
+
+.details-card {
+  // border: 1px solid yellow;
+  flex-wrap: wrap;
+  margin-bottom: 3vh;
+  img {
+    width: 10rem;
+    // height: 10rem;
+    align-items: center;
+    justify-content: center;
+    // border: 1px solid red;
+  }
+  .details-card--heading {
+    display: flex;
+    height: 100%;
+    // border: 1px solid red;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: clamp(1.5rem, 1.373rem + 0.523vw, 2rem);
+  }
+  .details-card--para {
+    // border: 1px solid red;
+  }
+}

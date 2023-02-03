@@ -25,11 +25,10 @@ h6::selection {
 
 p {
   font-family: "Overpass", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.66rem;
+  font-size: clamp(0.75rem, 0.654rem + 0.392vw, 1.125rem);
+  line-height: 160%;
   font-weight: 200;
   color: #bbe1fa;
-  margin-top: 1.5rem;
 }
 p::selection {
   color: #1b262c;
@@ -37,22 +36,11 @@ p::selection {
 }
 
 .header_title {
-  font-size: 4rem;
+  font-size: clamp(2.375rem, 1.706rem + 2.745vw, 5rem);
 }
 .header_title span.cursive {
   font-family: "Edu NSW ACT Foundation", cursive;
   color: #3282b8;
-}
-
-h1.section_heading {
-  position: relative;
-  text-align: center;
-  font-weight: 500;
-  font-size: 2.4rem;
-  margin: auto;
-  margin-bottom: 8rem;
-  z-index: 999;
-  opacity: 1;
 }
 
 .cursive {
@@ -115,13 +103,6 @@ h1.section_heading {
   text-align: justify;
 }
 
-@media (max-width: 768px) {
-  h1.header_title {
-    font-size: 2rem;
-    line-height: 2.6rem;
-    margin-top: 6rem;
-  }
-}
 header {
   height: 100vh;
   border: 1px solid #1b262c;
@@ -395,6 +376,22 @@ a.letterbuttons {
     transition: none;
   }
 }
+.details-card {
+  flex-wrap: wrap;
+  margin-bottom: 3vh;
+}
+.details-card img {
+  width: 10rem;
+  align-items: center;
+  justify-content: center;
+}
+.details-card .details-card--heading {
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: clamp(1.5rem, 1.373rem + 0.523vw, 2rem);
+}
 .skill-badges {
   text-align: center;
   margin-bottom: 6rem;
@@ -470,24 +467,6 @@ p {
     padding: 1rem;
   }
 }
-#details .details-card {
-  display: flex;
-  flex-wrap: wrap;
-}
-#details .details-card img {
-  width: 7rem;
-  height: 7rem;
-  padding: 1rem;
-}
-#details .details-card h4 {
-  display: flex;
-  align-items: center;
-}
-#details .details-card p.details-card--para {
-  color: red;
-  flex: 100%;
-}
-
 #post-introduction {
   margin-top: 20rem;
   margin-bottom: 20rem;
@@ -685,8 +664,12 @@ a.nav_link.active::after {
     width: 100% !important;
     padding: 10px 20px !important;
   }
-  h1.section-heading {
+  .section-heading {
     max-width: 50%;
+    padding-bottom: 5vh;
+  }
+  section {
+    margin-top: 10vh;
   }
 }
 @media (max-width: 767px) {
@@ -699,8 +682,6 @@ a.nav_link.active::after {
   section {
     padding: 0;
     width: 100vw;
-    margin-top: 0rem !important;
-    margin-bottom: 4rem;
     scroll-margin-top: 2rem !important;
   }
   nav {
@@ -774,7 +755,6 @@ section {
 }
 @media (max-width: 576px) {
   section {
-    scroll-margin-top: -200px;
     padding: 0;
     margin: 0;
     margin-top: 1rem !important;
@@ -1231,6 +1211,9 @@ body {
   background-color: #1b262c;
 }
 
+p {
+  font-size: clamp(0.75rem, 0.654rem + 0.392vw, 1.125rem);
+}
 p a {
   color: #3282b8;
   font-weight: 700;
@@ -1248,7 +1231,7 @@ p a:hover:after {
 }
 
 .header--content {
-  margin-top: 8rem;
+  margin-top: 10vh;
 }
 
 .highlight {
@@ -1256,22 +1239,18 @@ p a:hover:after {
 }
 
 section {
-  margin-top: 10rem;
-  margin-bottom: 4rem;
-  scroll-margin-top: 250px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  scroll-margin-top: 10vh;
 }
 section .section-heading {
   position: relative;
   text-align: center;
+  font-size: clamp(2.375rem, 1.706rem + 2.745vw, 5rem);
   color: #3282b8;
-  display: inline;
   margin: 0 auto;
-  margin-bottom: 5rem;
+  margin-bottom: 10vh;
   transform: rotate(3deg);
-}
-
-section#skills {
-  scroll-margin-top: 225px;
 }
 
 .space-around {

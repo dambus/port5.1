@@ -19,6 +19,7 @@ body {
 }
 
 p {
+  font-size: clamp(0.75rem, 0.654rem + 0.392vw, 1.125rem);
   a {
     color: v.$color-high;
     font-weight: 700;
@@ -37,7 +38,7 @@ p {
 }
 
 .header--content {
-  margin-top: 8rem;
+  margin-top: 10vh;
 }
 
 .highlight {
@@ -45,24 +46,21 @@ p {
 }
 
 section {
-  margin-top: 10rem;
-  margin-bottom: 4rem;
-  scroll-margin-top: 250px;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  scroll-margin-top: 10vh;
 
   .section-heading {
     position: relative;
     text-align: center;
+    font-size: clamp(2.375rem, 1.706rem + 2.745vw, 5rem);
     color: v.$color-high;
-    display: inline;
+    // display: inline;
     // max-width: 25%;
     margin: 0 auto;
-    margin-bottom: 5rem;
+    margin-bottom: 10vh;
     transform: rotate(3deg);
   }
-}
-
-section#skills {
-  scroll-margin-top: 225px;
 }
 
 // UTILITY CLASSES

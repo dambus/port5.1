@@ -29,11 +29,13 @@ h6 {
 
 p {
   font-family: $font-over;
-  font-size: 1.05rem;
-  line-height: 1.66rem;
+  // font-size: 1.05rem;
+  font-size: clamp(0.75rem, 0.654rem + 0.392vw, 1.125rem);
+  // line-height: 1.66rem;
+  line-height: 160%;
   font-weight: 200;
   color: v.$color-text;
-  margin-top: 1.5rem;
+  // margin-top: 1.5rem;
   &::selection {
     color: v.$color-bg;
     background: v.$color-high;
@@ -41,22 +43,12 @@ p {
 }
 
 .header_title {
-  font-size: 4rem;
+  // font-size: 4rem;
+  font-size: clamp(2.375rem, 1.706rem + 2.745vw, 5rem);
   span.cursive {
     font-family: $font-edu;
     color: v.$color-high;
   }
-}
-
-h1.section_heading {
-  position: relative;
-  text-align: center;
-  font-weight: 500;
-  font-size: 2.4rem;
-  margin: auto;
-  margin-bottom: 8rem;
-  z-index: 999;
-  opacity: 1;
 }
 
 .cursive {
@@ -119,13 +111,5 @@ h1.section_heading {
   p {
     text-indent: 30px;
     text-align: justify;
-  }
-}
-
-@media (max-width: 768px) {
-  h1.header_title {
-    font-size: 2rem;
-    line-height: 2.6rem;
-    margin-top: 6rem;
   }
 }
