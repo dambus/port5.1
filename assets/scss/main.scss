@@ -49,6 +49,7 @@ section {
   margin-top: 10vh;
   margin-bottom: 10vh;
   scroll-margin-top: 10vh;
+  min-height: calc(100vh - 8rem);
 
   .section-heading {
     position: relative;
@@ -58,7 +59,7 @@ section {
     // display: inline;
     // max-width: 25%;
     margin: 0 auto;
-    margin-bottom: 10vh;
+    padding-bottom: 20vh;
     transform: rotate(3deg);
   }
 }
@@ -133,4 +134,9 @@ section {
 
 .cta {
   margin-top: 5rem;
+}
+
+.cta-htext {
+  margin-bottom: 10vh;
+  text-align: center;
 }
