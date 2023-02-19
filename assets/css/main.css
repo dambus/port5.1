@@ -472,6 +472,23 @@ p {
   margin-bottom: 20rem;
 }
 
+.icon-span {
+  position: relative;
+  color: #3282b8;
+  margin-top: 1rem;
+  font-size: clamp(1.25rem, 1.068rem + 0.7767vw, 2rem);
+}
+.icon-span::after {
+  position: absolute;
+  content: "";
+  top: -50%;
+  left: -50%;
+  height: 200%;
+  width: 200%;
+  border: 2px solid #0f4c75;
+  transform: rotate(3deg);
+}
+
 #footer {
   width: 96vw;
   margin: 8rem 0rem;

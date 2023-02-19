@@ -64,3 +64,21 @@ p {
   margin-bottom: 20rem;
 }
 
+.icon-span {
+  position: relative;
+  color: v.$color-high;
+  margin-top: 1rem;
+  // width: 2rem;
+  // height: 2rem;
+  font-size: clamp(1.25rem, 1.068rem + 0.7767vw, 2rem);
+  &::after {
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: -50%;
+    height: 200%;
+    width: 200%;
+    border: 2px solid v.$color-low;
+    transform: rotate(3deg);
+  }
+}
